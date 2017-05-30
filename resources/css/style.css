@@ -14,8 +14,8 @@
   max-width:  172px;
 }
 .navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   line-height: 20px;
 }
 
@@ -35,9 +35,10 @@
 	color: #ffffff;
 	font-family: Lato;
   font-style: italic;
-	font-size: 1.7em;
-	font-weight: 300;
-	padding: 30px 25px 33px 25px;
+	font-size: 1.25em;
+	font-weight: 400;
+  margin-top: 1.5em;
+	/*padding: 30px 25px 33px 25px;*/
 }
 
 .navbar-inverse .navbar-nav li a:hover {
@@ -46,3 +47,10 @@
 	height: 100%;
 }
 /*https://codepen.io/macsupport/pen/bKFzD?editors=1010*/
+
+.container {
+  padding: 0;
+  margin-left: 30px;
+  margin-right: 20px;
+
+}
