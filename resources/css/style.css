@@ -54,3 +54,89 @@
   margin-right: 20px;
 
 }
+
+/*----------------------------------------------
+--Banner
+-----------------------------------------------  */
+.sect-banner{
+ display: table;
+ margin: 0 auto;
+ text-align: center;
+
+ /*-- Full Height --*/
+ height: 100vh;
+ color:	rgba(255,255,255,0.9);
+}
+
+ /*-- Create an Overlay --*/
+
+.sect-banner:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(118, 144, 164, 0.4);
+  z-index: 0;
+ }
+
+ /*-- Vertically center --*/
+.sect-banner .v-center{
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  z-index: 4;
+ }
+}
+
+.kf-slider li {
+  -webkit-animation: fade-out 16s infinite both; /* Safari 4+ */
+  -moz-animation:    fade-out 16s infinite both; /* Fx 5+ */
+  -o-animation:      fade-out 16s infinite both; /* Opera 12+ */
+  animation:         fade-out 16s infinite both; /* IE 10+, Fx 29+ */
+}
+
+@keyframes fade-out {
+ 33%{
+  opacity: 1;
+ }
+ 66%{
+ opacity: 0;
+ }
+ }
+
+ ul.kf-slider li{
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position:	50%;
+   z-index: 0;
+   opacity: 0;
+   left: 0;
+  }
+
+ul.kf-slider li:nth-child(1){
+  /*-- Add animation --*/
+  animation: fade-out 9s;
+  /*-- Image 1: small --*/
+  background-image: url(../images/IMG_9417.JPG);
+}
+/*-- Image 2 --*/
+ul.kf-slider li:nth-child(2){
+  animation: fade-out 9s;
+  animation-delay: 3s;
+ background-image: url(../images/IMG_9462.JPG);
+ /*-- Animation delay: 3s --*/
+
+}
+/*-- Image 3 --*/
+ul.kf-slider li:nth-child(3){
+ background-image: url(../images/IMG_9530.JPG);
+ /*-- Animation delay: 3s --*/
+ animation: fade-out 9s;
+ animation-delay: 6s;
+}
