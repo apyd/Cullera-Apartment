@@ -1,11 +1,11 @@
 #logo {
   height: 80px;
-  padding:10px 0;
+  padding: 5px 0;
 }
 .navbar {
-  height: 75px;
+  height: 90px;
   background-color: #1A5398;
-  opacity: .8;
+  opacity: .9;
 }
 .navbar-brand {
   padding: 0;
@@ -40,7 +40,7 @@
 }
 
 .navbar-inverse .navbar-nav li a:hover {
-	background-color: #444444;
+	background-color: rgba(222,222,222, .2);
 	transition: 0.7s all linear;
 	height: 100%;
 }
@@ -129,7 +129,7 @@ nav.fill ul li a:hover:after {
   100% {
     width: 100%;
     height: 100%;
-    background: rgba(17, 25, 98, 0.97); /*kolor wypelnienia */
+    background: #001D4A; /*kolor wypelnienia */
   }
 }
 /*End of nav effects */
