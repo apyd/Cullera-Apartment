@@ -44,9 +44,50 @@
 	transition: 0.7s all linear;
 	height: 100%;
 }
+
+ul.nav li a {
+  padding: 12.4px 15.2px;
+}
+#Reservation {
+  background-color: rgba(26, 153, 181, 0.85);
+  border: solid;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px 15.2px;
+}
+ul.dropdown-menu {
+  min-width: 0;
+  width: 55px;
+  padding: 0;
+}
+
+ul.dropdown-menu li a {
+  padding: 3px 15px;
+}
+
 /*https://codepen.io/macsupport/pen/bKFzD?editors=1010*/
 
-/*Nav effects */
+@media (max-width: 1050.1px) {
+  .navbar-inverse .navbar-nav > li > a {
+  	font-size: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  div.navbar-header div.navbar-brand {
+    margin-left: 15%;
+  }
+  .navbar-toggle {
+    margin-right: 10%;
+  }
+
+}
+
+
+
+/*----------------------------------------------
+--Nav effects
+-----------------------------------------------  */
 
 nav ul {
   list-style: none;
@@ -72,12 +113,10 @@ nav ul li a:hover {
   color: #555;
 }
 
-/* stroke */
-nav.stroke ul li a,
 nav.fill ul li a {
   position: relative;
 }
-nav.stroke ul li a:after,
+
 nav.fill ul li a:after {
   position: absolute;
   bottom: 0;
@@ -90,9 +129,6 @@ nav.fill ul li a:after {
   background: #aaa; /*kolor wypelnienia linii*/
   background: blue;
   height: 1px;
-}
-nav.stroke ul li a:hover:after {
-  width: 100%;
 }
 
 nav.fill ul li a {
@@ -133,43 +169,6 @@ nav.fill ul li a:hover:after {
   }
 }
 /*End of nav effects */
-
-@media (max-width: 991.9px) {
-  #test {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: auto;
-  }
-  .navbar-brand {
-    padding-left: 10px;
-  }
-}
-
-#button-nav {
-  margin-right: 40px;
-  margin-top: 25px;
-}
-
-@media (max-width:767.8px) {
-  #logo {
-    margin-left: 50%;
-  }
-}
-
-@media (max-width: 991.9px) {
-  #test {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: auto;
-  }
-  .navbar-brand {
-    padding-left: 10px;
-  }
-}
-
-.test-img {
-  width: 30px;
-}
 
 
 /*----------------------------------------------
