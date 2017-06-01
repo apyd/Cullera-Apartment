@@ -64,12 +64,15 @@ ul.dropdown-menu {
 }
 
 ul.dropdown-menu li a {
-  padding: 3px 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
 }
 
 /*https://codepen.io/macsupport/pen/bKFzD?editors=1010*/
 
-@media (max-width: 1000.1px) {
+/* 976 px  984px*/
+@media (max-width: 992.1px) {
   .navbar-inverse .navbar-nav > li > a {
   	font-size: 0.8em;
     margin-top: 2em;
@@ -93,7 +96,9 @@ ul.dropdown-menu li a {
     min-height: 60px;
     max-height: 65px;
   }
-
+  #test {
+    height: 65px;
+  }
 }
 
 
