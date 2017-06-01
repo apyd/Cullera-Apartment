@@ -9,8 +9,6 @@
 }
 .navbar-brand {
   padding: 0;
-  /* bardziej wysrodkowac zdjecie w navbarze*/
-  /* margin nic nie zmienia*/
   max-width:  172px;
 }
 .navbar-nav > li > a {
@@ -26,9 +24,10 @@
 	min-height: 80px;
 }
 
-.nav li {
-	display: inline-block;
-	/*color: white;*/
+.container .navbar-right {
+	/*display: inline-block;
+	color: white;*/
+  height: 100%;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -46,14 +45,17 @@
 }
 
 ul.nav li a {
-  padding: 12.4px 15.2px;
+  box-sizing: border-box;
+  min-height: 45px;
 }
 #Reservation {
+  box-sizing: border-box;
+  height: 45px;
   background-color: rgba(26, 153, 181, 0.85);
   border: solid;
+  border-width: 0.5px;
   margin-left: 5px;
   margin-right: 5px;
-  padding: 10px 15.2px;
 }
 ul.dropdown-menu {
   min-width: 0;
@@ -67,9 +69,10 @@ ul.dropdown-menu li a {
 
 /*https://codepen.io/macsupport/pen/bKFzD?editors=1010*/
 
-@media (max-width: 1050.1px) {
+@media (max-width: 1000.1px) {
   .navbar-inverse .navbar-nav > li > a {
   	font-size: 0.8em;
+    margin-top: 2em;
   }
 }
 
@@ -78,7 +81,17 @@ ul.dropdown-menu li a {
     margin-left: 15%;
   }
   .navbar-toggle {
+    margin-top: 15.5px;
     margin-right: 10%;
+
+  }
+  #logo {
+    width: 120px;
+    height: 60px;
+  }
+  .navbar {
+    min-height: 60px;
+    max-height: 65px;
   }
 
 }
