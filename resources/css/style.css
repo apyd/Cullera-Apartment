@@ -75,6 +75,7 @@ ul.dropdown-menu li a {
   .navbar-inverse .navbar-nav > li > a {
   	font-size: 0.8em;
     margin-top: 2em;
+    background-color: #1A5398;
   }
 }
 
@@ -85,7 +86,7 @@ ul.dropdown-menu li a {
   .navbar-toggle {
     margin-top: 15.5px;
     margin-right: 10%;
-
+      background-color: #1A5398;
   }
   #logo {
     width: 120px;
@@ -97,6 +98,24 @@ ul.dropdown-menu li a {
   }
   #test {
     height: 65px;
+  }
+  /* Opcjonalne! Start */
+  .navbar-collapse {
+    min-height: 420px;
+  }
+    /* Opcjonalne! Stop */
+    .navbar-inverse .navbar-nav > li > a {
+    	font-size: 0.8em;
+      margin-top: 1em;
+      background-color: #1A5398;
+    }
+  #Reservation {
+    box-sizing: border-box;
+    height: 45px;
+    background-color: rgba(15, 24, 26, 0.40);
+    border: .5px solid;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
