@@ -141,38 +141,42 @@
   		</nav>
 
 
-<!-- TODO FOR SLIDER:
-- INFINITE LOOP FOR IMAGES
-- ADD CONTROLS ON BOTTOM OF SLIDER
-- ADD ANIMATION AND BUTTON TO SLIDER content
--->
-<section class="sect-banner">
- <!--List items for bg images -->
- <ul class="kf-slider">
-  <li>
-    <div class="v-center">
-      <h1>Slajd nr 1</h1>
-      <p>Text no 1</p>
-      <button>To jest przycisk</button>
-   </div>
- </li>
-  <li>
-    <div class="v-center">
-        <h1>Slajd nr 2</h1>
-        <p>Text no 2</p>
-        <button>Drugi przycisk</button>
-     </div>
-   </li>
-  <li>
-    <div class="v-center">
-      <h1>Slajd nr 3</h1>
-      <p>Text no 3</p>
-      <button>Trzeci przycisk</button>
-     </div>
-  </li>
- </ul>
-
-</section>
+      <div id="myCarousel" class="carousel-fade carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+        <div class="carousel-inner">
+          <div class="item bg bg1 active">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Cullera Apartment</h1>
+                <h4>Zapraszamy do Apartamentu Cullera położonego w słonecznej Hiszpanii</h4>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sprawdź wolne terminy</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item bg bg2">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Przykladowy naglowek</h1>
+                <h4>Tekst przykladowy</h4>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sprawdź wolne terminy</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item bg bg3">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>To jest jakis przykaldowy naglowek</h1>
+                <h4>Zupelnie inny tekst przykladowy</h4>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sprawdź wolne terminy</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 </body>
