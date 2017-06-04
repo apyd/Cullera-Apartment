@@ -24,12 +24,6 @@
 	min-height: 80px;
 }
 
-.container .navbar-right {
-	/*display: inline-block;
-	color: white;*/
-  height: 100%;
-}
-
 .navbar-inverse .navbar-nav > li > a {
   color: white;
   font-family: 'Open Sans', sans-serif;
@@ -99,14 +93,17 @@ ul.dropdown-menu li a {
   #test {
     height: 65px;
   }
-  /* Opcjonalne! Start */
-  .navbar-collapse {
-    min-height: 420px;
+  
+/* Opcjonalne! Start
+  .navbar-fixed-top .navbar-collapse {
+    max-height: 420px;
   }
-    /* Opcjonalne! Stop */
+/* Opcjonalne! Stop */
     .navbar-inverse .navbar-nav > li > a {
     	font-size: 0.8em;
-      margin-top: 1em;
+      margin-top: 0em;
+      border: solid;
+      border-width: 0.5px;
       background-color: #1A5398;
     }
   #Reservation {
@@ -116,6 +113,51 @@ ul.dropdown-menu li a {
     border: .5px solid;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .navbar-nav > li > ul {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .navbar-nav > li > ul > li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .dropdown-menu > li > a {
+    padding-left: 0;
+  }
+  .navbar-nav .open .dropdown-menu > li > a {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+  }
+  .navbar-nav .open .dropdown-menu {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    border-width: 0;
+  }
+
+/*
+  .centering {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .centering > li {
+
+  }
+  */
+  a.dropdown-toggle {
+    margin-bottom: 7px;
+  }
+  ul.nav {
+    margin-top:0px;
+    margin-bottom: 0px;
   }
 }
 
