@@ -21,8 +21,8 @@ a.btn {
 }
 
 #Reservation {
+  height: 50px;
   box-sizing: border-box;
-  height: 45px;
   background-color: rgba(15, 24, 26, 0.40);
   border: .5px solid;
   margin-left: 5px;
@@ -51,16 +51,22 @@ a.btn {
   min-height: 80px;
 }
 
+.container {
+  height: inherit;
+}
+#bs-example-navbar-collapse-1 {
+  margin-top: 20px;
+}
 .navbar-nav>li>a {
-  padding-top: 10px;
-  padding-bottom: 10px;
   line-height: 20px;
 }
-
+.navbar-nav>li {
+  vertical-align: middle;
+  text-align: center;
+}
 .navbar-inverse .navbar-nav>li>a {
   color: white;
   font: 400 1.15em 'Open Sans', sans-serif;
-  margin-top: 1.5em;
 }
 
 .navbar-inverse .navbar-nav li a:hover {
@@ -73,11 +79,21 @@ ul.nav li a {
   box-sizing: border-box;
   min-height: 45px;
 }
-
+li.dropdown {
+  height: 50px;
+}
+li.dropdown > a {
+  height: 50px;
+}
+li.dropdown > a > img {
+  margin-top: -2px;
+}
+@media (min-width: 768px) {
 ul.dropdown-menu {
   min-width: 0;
   width: 55px;
   padding: 0;
+}
 }
 
 ul.dropdown-menu li a {
@@ -95,17 +111,34 @@ ul.dropdown-menu li a {
     top: 40%;
   }
   #Reservation {
-    height: 35px;
+    height: 43.6px;
   }
   .navbar-inverse .navbar-nav>li>a {
     font-size: 0.8em;
-    margin-top: 2.3em;
   }
   ul.nav li a {
     min-height: 35px;
   }
+  #bs-example-navbar-collapse-1 {
+    margin-top: 23.2px;
+  }
+  li.dropdown {
+    height: 43.6px;
+  }
+  li.dropdown > a {
+    height: 43.6px;
+  }
+  li.dropdown > a > img {
+    margin-top: -5.2px;
+  }
 }
 
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+#Reservation:hover,
+#Reservation:focus {
+  background-color: #001D4A;
+}
 
 /*----------------------------------------------
 --Nav effects
@@ -338,6 +371,10 @@ nav.fill ul li a:hover:after {
     margin-left: 0;
     margin-right: 0;
     justify-content: center;
+    width: auto;
+    background-color: #1A5398;
+    padding: 0;
+    border-width: 0;
   }
   .navbar-collapse {
     border-width: 0;
@@ -354,5 +391,103 @@ nav.fill ul li a:hover:after {
   }
   .carousel-caption {
     top: 30%;
+  }
+  .navbar-collapse.collapse {
+    display: none;
+  }
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .container > .navbar-header > div.navbar-brand {
+    margin-left: 15%;
+  }
+  .navbar-header {
+    float:none;
+  }
+    .navbar-toggle {
+      display: inline-block;
+    }
+    .collapse.in {
+      display:block;
+    }
+    #bs-example-navbar-collapse-1 {
+      margin-top: 0px;
+    }
+li.dropdown > a > img {
+  margin-top: 0;
+  vertical-align: middle;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > .open > a,
+ .navbar-inverse .navbar-nav > .open > a:hover,
+ .navbar-inverse .navbar-nav > .open > a:focus,
+ #Reservation:hover,
+ #Reservation:focus {
+  background-color: #001D4A;
+}
+
+}
+@media (width: 768px) {
+  .container > .navbar-header {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .collapse.in {
+    display: block;
+  }
+  #bs-example-navbar-collapse-1 {
+    margin-top: 0px;
+    min-width: 768px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+   ul.navbar-nav {
+    float: none !important;
+    width: 768px;
+    margin-left: -15px;
+  }
+  nav.navbar > div.container {
+    margin-left:0;
+    margin-right:0;
+    min-width: 768px;
+    padding:0;
+  }
+  .dropdown-menu>li>a {
+    padding-left: 0;
+  }
+  .navbar-nav .open .dropdown-menu>li>a {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    background-color: #1A5398;
+  }
+  .navbar-nav .open .dropdown-menu {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    width: 768px;
+    background-color: #1A5398;
+    padding: 0;
+    border-width: 0;
+  }
+
+  #Reservation {
+    height: 35.2px;
+  }
+  .navbar-inverse .navbar-nav > li.dropdown > a {
+    height: 43.6px;
+  }
+  .navbar-inverse .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 35px;
   }
 }
