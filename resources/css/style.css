@@ -22,8 +22,9 @@ h3 {
 }
 
 .Reservation {
-  height: 50px;
   box-sizing: border-box;
+  height: 52.4px;
+  max-height: 52.4px;
   background-color: rgba(15, 24, 26, 0.70);
   border: .5px solid;
   margin-left: 5px;
@@ -429,7 +430,8 @@ ul.dropdown-menu {
     top: 40%;
   }
   .Reservation {
-    height: 43.6px;
+    height: 46px;
+    max-height: 46px;
   }
   .navbar-inverse .navbar-nav>li>a {
     font-size: 0.8em;
@@ -437,7 +439,7 @@ ul.dropdown-menu {
   ul.nav li a {
     min-height: 35px;
   }
-  #bs-example-navbar-collapse-1 {
+  .navbar-positioned {
     margin-top: 23.2px;
   }
   li.dropdown {
@@ -507,7 +509,8 @@ ul.dropdown-menu {
     height: 60px;
   }
   .Reservation {
-    height: 35.2px;
+    height: 36.8px;
+    max-height: 36.8px;
     background-color: #1A5398;
     border: none;
     border-top: solid;
@@ -608,7 +611,7 @@ ul.dropdown-menu {
     .collapse.in {
       display:block;
     }
-    #bs-example-navbar-collapse-1 {
+    .navbar-positioned {
       margin-top: 0px;
     }
 li.dropdown > a > img {
@@ -634,7 +637,10 @@ li.dropdown > a > img {
   .collapse.in {
     display: block;
   }
-  #bs-example-navbar-collapse-1 {
+  .navbar-positioned {
+    margin-top: 0px;
+  }
+  .navbar-positioned {
     margin-top: 0px;
     min-width: 768px;
   }
