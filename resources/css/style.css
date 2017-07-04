@@ -406,6 +406,66 @@ input {
   margin-bottom: 10px;
 }
 
+/* Zakładka cennik */
+.cennik {
+  background-color: #F2C55C;
+  background-color: #DEDEDE;
+  /*background: -moz-radial-gradient(center, ellipse cover,  #eded2f 0%, #fff 100%);*/
+  padding-top: 90px;
+}
+.price-out {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+.price-in {
+  background-color: #001D4A;
+  background-color: #F2C55C;
+  background: -moz-radial-gradient(center, ellipse cover,  #FFD700 10%, #DEDEDE 90%);
+/*
+background: #eded2f; /* Old browsers
+background: -moz-radial-gradient(center, ellipse cover,  #eded2f 0%, #474919 100%); /* FF3.6+
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#eded2f), color-stop(100%,#474919)); /* Chrome,Safari4+
+background: -webkit-radial-gradient(center, ellipse cover,  #eded2f 0%,#474919 100%); /* Chrome10+,Safari5.1+
+background: -o-radial-gradient(center, ellipse cover,  #eded2f 0%,#474919 100%); /* Opera 12+
+background: -ms-radial-gradient(center, ellipse cover,  #eded2f 0%,#474919 100%); /* IE10+
+background: radial-gradient(ellipse at center,  #eded2f 0%,#474919 100%); /* W3C
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eded2f', */
+  -moz-border-radius:100%;
+  -webkit-border-radius:100%;
+  border-radius:100%;
+  height: 150px;
+  width: 150px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 4px;
+  box-shadow: 0px 0px 1px #474747;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+h2.prices, h3.prices {
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+.col-res {
+  width: 20%;
+}
+.price-header {
+  font-size: 1.4em;
+}
+.tab-title {
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 5px;
+}
+div.tab-title > p.header-description {
+  padding-top: 20px;
+  font-size: 4em;
+}
+
 @media (min-width: 768px) {
 ul.dropdown-menu {
   min-width: 0;
@@ -450,6 +510,15 @@ ul.dropdown-menu {
   }
   li.dropdown > a > img {
     margin-top: -5.2px;
+  }
+  .col-res {
+    width: 33%;
+  }
+  .col-res:nth-child(4) {
+    width: 50%;
+  }
+  .col-res:nth-child(5) {
+    width: 50%;
   }
 }
 
@@ -627,6 +696,16 @@ li.dropdown > a > img {
  .Reservation:focus {
   background-color: #001D4A;
 }
+/*Cennik */
+.cennik {
+  padding-top: 65px;
+}
+.col-res {
+  width: 50%;
+}
+.col-res:nth-child(5) {
+  width: 100%;
+}
 
 }
 @media (width: 768px) {
@@ -690,4 +769,23 @@ li.dropdown > a > img {
     padding-bottom: 10px;
     height: 35px;
   }
+  /* Cennik */
+  .cennik {
+    padding-top: 65px;
+  }
+  .col-res {
+    width: 50%;
+  }
+  .col-res:nth-child(5) {
+    width: 50%;
+  }
+}
+@media(max-width:400px) {
+  .col-res {
+    width: 100%;
+  }
+}
+/* */
+.nav-background {
+  background-color: #1A5398;
 }

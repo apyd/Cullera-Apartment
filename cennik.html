@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+
+<head>
+  <!-- content-type, which overrides http equivalent header. Because of charset, this meta should be set at first. -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--  Overrides http equivalent header. This tells IE to use the most updated engine.  -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!--  Tells crawlers how to crawl this page, and the role of this page. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
+  <script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="resources/js/map.js"></script>
+
+  <title>Sample HTML index file</title>
+</head>
+
+<body>
+<div class="cennik">
+  <nav class="navbar navbar-inverse navbar-fixed-top nav-background" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target=".navbar-positioned" id="button-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+          <a href="#">
+         <img alt="Logo" class="logo" src="resources/images/logo.png" />
+    </a>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-right navbar-positioned">
+        <section>
+          <nav class="fill">
+            <ul class="nav navbar-nav navbar-right">
+              <li> <a href="#">Oferta</a> </li>
+              <li> <a href="#">Atrakcje</a> </li>
+              <li> <a href="#">Cennik</a> </li>
+              <li> <a href="#">Galeria</a> </li>
+              <li> <a href="#">Kontakt</a> </li>
+              <li> <a href="#" class="Reservation">Rezerwacja</a> </li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="resources/images/pl.png"</img><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <div>
+                    <li><a href="start-seite"><img src="resources/images/de.png"</img></a></li>
+                    <li><a href="empezar"><img src="resources/images/sp.png"</img></a></li>
+                    <li><a href="home"><img src="resources/images/gb.png"</img></a></li>
+                    <li><a href="bonjour"><img src="resources/images/fr.png"</img></a></li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+        </section>
+      </div>
+    </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="tab-title">
+        <p class="header-description">Cennik</p>
+      </div>
+      <h3 class="header-description">Nasza oferta</h3>
+      <p class="short-description price-header">Prezentujemy Państwu ceny tygodniowego wynajmu apartamentu w poszczególnych
+      okresach roku. W przypadku pobytu powyżej 7 dni, cena podlega negocjacji.</p>
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res">
+          <div class="row price-out">
+              <span class="price-in"><h2 class="prices">450 €</h2></span>
+          </div>
+          <div class="row">
+            <p class="txt">01.04 - 30.06</p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res">
+          <div class="row price-out">
+              <span class="price-in"><h2 class="prices">700 €</h2></span>
+          </div>
+          <div class="row">
+            <p class="txt">01.07 - 31.08</p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res">
+          <div class="row price-out">
+              <span class="price-in"><h2 class="prices">450 €</h2></span>
+          </div>
+          <div class="row">
+            <p class="txt">01.09 - 15.10</p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res">
+          <div class="row price-out">
+              <span class="price-in"><h2 class="prices">400 €</h2></span>
+          </div>
+          <div class="row">
+            <p class="txt">16.10 - 31.03</p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res">
+          <div class="row price-out">
+              <span class="price-in"><h3 class="prices">Do negocjacji</h3></span>
+          </div>
+          <div class="row">
+            <p class="txt">Pobyt powyżej 7 dni</p>
+          </div>
+        </div>
+    </div>
+    </div>
+
+
+  </div>
+</body>
