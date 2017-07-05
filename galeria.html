@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+
+<head>
+  <title>Galeria</title>
+  <!-- content-type, which overrides http equivalent header. Because of charset, this meta should be set at first. -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--  Overrides http equivalent header. This tells IE to use the most updated engine.  -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!--  Tells crawlers how to crawl this page, and the role of this page. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
+  <script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="resources/js/map.js"></script>
+
+  <script type="text/javascript" src="resources/js/jquery.fancybox.js?v=2.1.5"></script>
+  <link rel="stylesheet" type="text/css" href="resources/css/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.fancybox').fancybox();
+      $(".fancybox-effects-a").fancybox({
+        helpers: {
+          title: {
+            type: 'outside'
+          },
+          overlay: {
+            speedOut: 0
+          }
+        }
+      });
+
+      $(".fancybox-effects-b").fancybox({
+        openEffect: 'none',
+        closeEffect: 'none',
+
+        helpers: {
+          title: {
+            type: 'over'
+          }
+        }
+      });
+
+      $(".fancybox-effects-c").fancybox({
+        wrapCSS: 'fancybox-custom',
+        closeClick: true,
+
+        openEffect: 'none',
+
+        helpers: {
+          title: {
+            type: 'inside'
+          },
+          overlay: {
+            css: {
+              'background': 'rgba(238,238,238,0.85)'
+            }
+          }
+        }
+      });
+
+      $(".fancybox-effects-d").fancybox({
+        padding: 0,
+
+        openEffect: 'elastic',
+        openSpeed: 150,
+
+        closeEffect: 'elastic',
+        closeSpeed: 150,
+
+        closeClick: true,
+
+        helpers: {
+          overlay: null
+        }
+      });
+
+      $('.fancybox-buttons').fancybox({
+        openEffect: 'none',
+        closeEffect: 'none',
+
+        prevEffect: 'none',
+        nextEffect: 'none',
+
+        closeBtn: false,
+
+        helpers: {
+          title: {
+            type: 'inside'
+          },
+          buttons: {}
+        },
+
+        afterLoad: function() {
+          this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+        }
+      });
+
+      $('.fancybox-thumbs').fancybox({
+        prevEffect: 'none',
+        nextEffect: 'none',
+
+        closeBtn: false,
+        arrows: false,
+        nextClick: true,
+
+        helpers: {
+          thumbs: {
+            width: 60,
+            height: 50,
+          }
+        }
+      });
+
+      $('.fancybox-media')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+          openEffect: 'none',
+          closeEffect: 'none',
+          prevEffect: 'none',
+          nextEffect: 'none',
+
+          arrows: false,
+          helpers: {
+            media: {},
+            buttons: {}
+          }
+        });
+
+      $("#fancybox-manual-a").click(function() {
+        $.fancybox.open('1_b.jpg');
+      });
+
+      $("#fancybox-manual-b").click(function() {
+        $.fancybox.open({
+          href: 'iframe.html',
+          type: 'iframe',
+          padding: 5
+        });
+      });
+
+      $("#fancybox-manual-c").click(function() {
+        $.fancybox.open([{
+          href: '1_b.jpg',
+          title: 'My title'
+        }, {
+          href: '2_b.jpg',
+          title: '2nd title'
+        }, {
+          href: '3_b.jpg'
+        }], {
+          helpers: {
+            thumbs: {
+              width: 75,
+              height: 50
+            }
+          }
+        });
+      });
+
+
+    });
+  </script>
+  <style type="text/css">
+    .fancybox-custom .fancybox-skin {
+      box-shadow: 0 0 50px #222;
+    }
+  </style>
+</head>
+
+<body>
+<div class="galeria">
+  <nav class="navbar navbar-inverse navbar-fixed-top nav-background" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target=".navbar-positioned" id="button-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+          <a href="#"><img alt="Logo" class="logo" src="resources/images/logo.png" /></a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse navbar-right navbar-positioned">
+        <section>
+          <nav class="fill">
+            <ul class="nav navbar-nav navbar-right">
+              <li> <a href="#">Oferta</a> </li>
+              <li> <a href="#">Atrakcje</a> </li>
+              <li> <a href="#">Cennik</a> </li>
+              <li> <a href="#">Galeria</a> </li>
+              <li> <a href="#">Kontakt</a> </li>
+              <li> <a href="#" class="Reservation">Rezerwacja</a> </li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="resources/images/pl.png"</img><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <div>
+                    <li><a href="start-seite"><img src="resources/images/de.png"</img></a></li>
+                    <li><a href="empezar"><img src="resources/images/sp.png"</img></a></li>
+                    <li><a href="home"><img src="resources/images/gb.png"</img></a></li>
+                    <li><a href="bonjour"><img src="resources/images/fr.png"</img></a></li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+        </section>
+      </div>
+    </div>
+  </nav>
+    <div class="container">
+      <div class="tab-title">
+        <p class="header-description">Galeria</p>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""><a class="fancybox" href="resources/images/1b.jpg" data-fancybox-group="gallery"><img src="resources/images/1b.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""><a class="fancybox" href="resources/images/2b.jpg" data-fancybox-group="gallery"><img src="resources/images/2b.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""><a class="fancybox" href="resources/images/5b.jpg" data-fancybox-group="gallery"><img src="resources/images/5b.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/6b.jpg" data-fancybox-group="gallery"><img src="resources/images/6b.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/7b.jpg" data-fancybox-group="gallery"><img src="resources/images/7b.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/8b.jpg" data-fancybox-group="gallery"><img src="resources/images/8b.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/9b.jpg" data-fancybox-group="gallery"><img src="resources/images/9b.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""><a class="fancybox" href="resources/images/3b.jpg" data-fancybox-group="gallery"><img src="resources/images/3s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""><a class="fancybox" href="resources/images/4b.jpg" data-fancybox-group="gallery"><img src="resources/images/4s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/10b.jpg" data-fancybox-group="gallery"><img src="resources/images/10s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/11b.jpg" data-fancybox-group="gallery"><img src="resources/images/11s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/12b.jpg" data-fancybox-group="gallery"><img src="resources/images/12s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/13b.jpg" data-fancybox-group="gallery"><img src="resources/images/13s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/14b.jpg" data-fancybox-group="gallery"><img src="resources/images/14s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/15b.jpg" data-fancybox-group="gallery"><img src="resources/images/15s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+              <span class=""></span><a class="fancybox" href="resources/images/16b.jpg" data-fancybox-group="gallery"><img src="resources/images/16s.jpg" alt="" /></a></span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+            <div class="gallery-out">
+                <span class=""></span><a class="fancybox" href="resources/images/17b.jpg" data-fancybox-group="gallery"><img src="resources/images/17s.jpg" alt="" /></a></span>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+            <div class="gallery-out">
+                <span class=""></span><a class="fancybox" href="resources/images/18b.jpg" data-fancybox-group="gallery"><img src="resources/images/18s.jpg" alt="" /></a></span>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+            <div class="gallery-out">
+                <span class=""></span><a class="fancybox" href="resources/images/19b.jpg" data-fancybox-group="gallery"><img src="resources/images/19s.jpg" alt="" /></a></span>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+            <div class="gallery-out">
+                <span class=""></span><a class="fancybox" href="resources/images/20b.jpg" data-fancybox-group="gallery"><img src="resources/images/20s.jpg" alt="" /></a></span>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+            <div class="gallery-out">
+                <span class=""></span><a class="fancybox" href="resources/images/21b.jpg" data-fancybox-group="gallery"><img src="resources/images/21s.jpg" alt="" /></a></span>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+            <div class="gallery-out">
+                <span class=""></span><a class="fancybox" href="resources/images/22b.jpg" data-fancybox-group="gallery"><img src="resources/images/22s.jpg" alt="" /></a></span>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+  </div>
+</body>
