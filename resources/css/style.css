@@ -388,6 +388,9 @@ div.tab-title > p.header-description {
   padding-top: 20px;
   font-size: 4em;
 }
+ul.ul-cennik > li {
+  margin-top: 1.5em;
+}
 
 /* Galeria */
 .galeria {
@@ -404,10 +407,16 @@ div.tab-title > p.header-description {
 a.fancybox > img {
   width: 100%;
   height: 100%;
+  -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.8);
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.8);
+}
+.col-res-gal {
+  width: 25%;
 }
 @media (max-width: 1200px) {
   .col-res-gal {
-    width: 20%;
+    width: 33.3%;
   }
 }
 @media (min-width: 768px) {
@@ -418,7 +427,7 @@ ul.dropdown-menu {
 }
 }
 
-@media (max-width: 992.1px) {
+@media (max-width: 992px) {
   h1 {
     font-size: 2.5em;
   }
@@ -456,14 +465,61 @@ ul.dropdown-menu {
   .col-res {
     width: 33%;
   }
-  .col-res-gal {
-    width: 25%;
+  .col-res:nth-child(4) {
+    width: 50%;
+  }
+  .col-res:nth-child(5) {
+    width: 50%;
+  }
+}
+
+
+@media (width: 992px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .navbar, .navbar .navbar-inverse {
+    background-color: rgba(26,83,152,0);
+}
+  .carousel-caption {
+    top: 40%;
+  }
+  .Reservation {
+    height: 46px;
+    max-height: 46px;
+  }
+  .navbar-inverse .navbar-nav>li>a {
+    font-size: 0.8em;
+  }
+  ul.nav li a {
+    min-height: 35px;
+  }
+  .navbar-positioned {
+    margin-top: 23.2px;
+  }
+  li.dropdown {
+    height: 43.6px;
+  }
+  li.dropdown > a {
+    height: 43.6px;
+  }
+  li.dropdown > a > img {
+    margin-top: -5.2px;
+  }
+  .col-res {
+    width: 33%;
   }
   .col-res:nth-child(4) {
     width: 50%;
   }
   .col-res:nth-child(5) {
     width: 50%;
+  }
+  .container {
+    width: 750px;
   }
 }
 
@@ -656,7 +712,7 @@ li.dropdown > a > img {
   padding-top: 65px;
 }
 .col-res-gal {
-  width: 33%;
+  width: 50%;
 }
 }
 @media (width: 768px) {
@@ -735,15 +791,10 @@ li.dropdown > a > img {
     padding-top: 65px;
   }
   .col-res-gal {
-    width: 33%;
+    width: 33.3%;
   }
 }
-@media(max-width: 550px) {
-  .col-res-gal {
-    width: 50%;
-  }
-}
-@media(max-width:400px) {
+@media(max-width: 576px) {
   .col-res {
     width: 100%;
   }
