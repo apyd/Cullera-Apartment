@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html prefix="og: http://ogp.me/ns#">
 
 <head>
@@ -10,7 +10,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
   <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
   <script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
@@ -174,24 +173,41 @@
 	<div class="row">
     <h3 class="header-description">Napisz do nas</h3>
 		<div class="col-md-6">
-      <form action="kontakt.php" method="post" id="form" class="formorla">
+    <iframe width="0" height="0" border="0" name="iframe" id="iframe"></iframe>
+      <form method="post" name="contactform" id="form" action="kontakt.php" target="iframe">
       	<div>
       		<label for="name">Imię i nazwisko<span>*<span></label>
-      		<input type="text" name="nazwisko" id="nazwisko" class="validate[required]" style="width: 100%" value="">
+      		<input type="text" name="name" id="name" style="width: 100%" required/>
       	</div>
       	<div>
-      		<label for="email">Adres Email<span>*<span></label>
-      		<input type="text" name="email" id="email" class="validate[required]" style="width: 100%" value="">
+      		<label for="email">Email<span>*<span></label>
+      		<input type="email" name="email" id="email" style="width: 100%" required/>
       	</div>
       	<div>
       		<label for="message">Treść korespondencji<span>*</span></label>
-      		<textarea name="tresc" id="tresc" rows="11" style="width: 100%"></textarea>
+      		<textarea name="message" id="tresc" rows="11" style="width: 100%" required></textarea>
       	</div>
-
-      	<input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" value="WYŚLIJ">
-
-      <input type="hidden" name="formid" value="form"></form>
+      	<input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" data-target="#messageSent" value="WYŚLIJ"/>
+        </form>
 		</div>
+
+<!-- Modal -->
+<div class="modal fade" id="messageSent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <p>Dziękujemy za wiadomość.</br> Skontaktujemy się z Państwem w najbliższym czasie.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Zamknij</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <div class="col-md-6 centered">
       <img alt="Logo" class="logo-alt" src="resources/images/logo2.png" />
       <p><img class="contact-icon" src="resources/images/address.png" alt="home-icon"/><span>Av. Alacant, 13, 46400 Cullera, Valencia, Hiszpania</span></p>
@@ -201,6 +217,8 @@
   </div>
 </div>
 </div>
+
+
 
     <footer class="footer">
       <div class="container">

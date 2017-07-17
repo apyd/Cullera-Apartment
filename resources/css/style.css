@@ -334,6 +334,10 @@ textarea {
   resize: vertical;
 }
 
+.modal-body p {
+  text-align: center;
+}
+
 .footer {
   bottom: 0;
   width: 100%;
@@ -462,6 +466,16 @@ ul.dropdown-menu {
   width: 55px;
   padding: 0;
 }
+
+ #messageSent .modal-dialog {
+    margin: 15% auto;
+    text-align: center
+  }
+
+#messageSent .modal-footer {
+  text-align: center;
+}
+
 }
 
 @media (max-width: 992px) {
@@ -751,6 +765,11 @@ li.dropdown > a > img {
 .col-res-gal {
   width: 50%;
 }
+
+#messageSent .modal-dialog {
+  margin: 50% auto;
+}
+
 }
 @media (width: 768px) {
   .container > .navbar-header {
@@ -829,6 +848,11 @@ li.dropdown > a > img {
   }
   .col-res-gal {
     width: 33.3%;
+  }
+
+   #messageSent .modal-dialog {
+    margin: 50% auto;
+    text-align: center
   }
 }
 @media(max-width: 576px) {
