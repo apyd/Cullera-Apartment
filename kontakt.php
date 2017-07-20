@@ -1,5 +1,5 @@
 <?php
-$to      = 'arturpydych@gmail.com';
+$to      = 'mikail94@gmail.com';
 $name	 = $_POST['name'];
 $email   = $_POST['email'];
 $from    = $email;
@@ -9,7 +9,7 @@ $message = '<b>Imię i nazwisko:   </b>' .$name. '<br><b>Od:  </b> '.$email. ' <
 
 $headers = 'Od: ' . $from . "\r\n" ;
 $headers .= 'MIME-Version: 1.0'."\r\n";
-$headers .= 'Content-type: text/html; charset=utf-8'."\r\n";	
+$headers .= 'Content-type: text/html; charset=utf-8'."\r\n";
 
 mail($to, $subject, $message, $headers);
 ?>

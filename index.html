@@ -22,8 +22,7 @@
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });</script>
-
-  <title>Sample HTML index file</title>
+  <title>Cullera Apartment</title>
 </head>
 
 <body>
@@ -174,7 +173,7 @@
 	<div class="row">
     <h3 class="header-description">Napisz do nas</h3>
 		<div class="col-md-6">
-    <iframe width="0" height="0" border="0" name="iframe" id="iframe"></iframe>
+    <iframe width="0" height="0" border="0" name="iframe" id="iframe" style="display: none;"></iframe>
       <form method="post" name="contactform" id="form" action="kontakt.php" target="iframe">
       	<div>
       		<label for="name">Imię i nazwisko<span>*</span></label>
@@ -186,13 +185,24 @@
       	</div>
       	<div>
       		<label for="content">Treść korespondencji<span>*</span></label>
-      		<textarea name="content" id="content" rows="11" style="width: 100%" required></textarea>
+      		<textarea name="content" id="comment" rows="11" style="width: 100%" required></textarea>
       	</div>
         <div>
-      	<input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" data-target="#messageSent" value="WYŚLIJ"/>
+      	<input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ"/>
+        <!-- data-target="#messageSent" --->
         </div>
         </form>
 		</div>
+
+    <script>
+    $( "form" ).submit(function( event ) {
+      if ( $( "input:first" ).val() !== "" ) {
+        $( "#messageSent").css("display","block");
+        $( "#messageSent").css("opacity","1");
+        return;
+      }
+    });
+    </script>
 
     <div class="col-md-6 centered">
       <img alt="Logo" class="logo-alt" src="resources/images/logo2.png" />
@@ -214,12 +224,20 @@
         <p>Dziękujemy za wiadomość.</br> Skontaktujemy się z Państwem w najbliższym czasie.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Zamknij</button>
+        <button type="button" onclick="close_modal();" class="btn btn-default btn-primary" data-dismiss="modal">Zamknij</button>
       </div>
     </div>
   </div>
 </div>
 
+<script>
+function close_modal() {
+    $( "#messageSent").css("display","none");
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("comment").value = "";
+  }
+</script>
     <footer class="footer">
       <div class="container">
           <p>Copyright 2017 &copy; Cullera Apartment</p>
