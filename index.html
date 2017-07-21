@@ -9,7 +9,7 @@
   <!--  Tells crawlers how to crawl this page, and the role of this page. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
   <script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
@@ -177,11 +177,11 @@
       <form method="post" name="contactform" id="form" action="kontakt.php" target="iframe">
       	<div>
       		<label for="name">Imię i nazwisko<span>*</span></label>
-      		<input type="text" name="name" id="name" style="width: 100%" required/>
+      		<input type="text" name="name" id="name" style="width: 100%" oninvalid="InvalidName(this);" oninput="InvalidName(this);" required/>
       	</div>
       	<div>
       		<label for="email">Email<span>*</span></label>
-      		<input type="email" name="email" id="email" style="width: 100%" required/>
+      		<input type="email" name="email" id="email" style="width: 100%" oninvalid="InvalidEmail(this);" oninput="InvalidEmail(this);" required/>
       	</div>
       	<div>
       		<label for="content">Treść korespondencji<span>*</span></label>
@@ -193,6 +193,42 @@
         </div>
         </form>
 		</div>
+
+    <script>
+    function InvalidEmail(textbox) {
+      if(textbox.value =='') {
+        textbox.setCustomValidity('Proszę podać adres email');
+      }
+      else {
+        textbox.setCustomValidity('');
+      }
+      return true;
+    }
+    </script>
+
+    <script>
+    function InvalidName(textbox) {
+      var re = /[-!@#$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/;
+      if(textbox.value == '') {
+        textbox.setCustomValidity('Proszę podać imię i nazwisko');
+      }
+      else if (textbox.value.search(re) > -1)
+      /*(textbox.value.includes('!') || textbox.value.includes('@') || textbox.value.includes('#') || textbox.value.includes('$')
+      || textbox.value.includes('%') || textbox.value.includes('^') || textbox.value.includes('&') || textbox.value.includes('*')
+      || textbox.value.includes('(') || textbox.value.includes(')') || textbox.value.includes('-') || textbox.value.includes('+')
+      || textbox.value.includes('_') || textbox.value.includes('=') || textbox.value.includes('[') || textbox.value.includes(']')
+      || textbox.value.includes('{') || textbox.value.includes('}') || textbox.value.includes(';') || textbox.value.includes(':')
+      || textbox.value.includes('"') || textbox.value.includes(',') || textbox.value.includes('<') || textbox.value.includes('.')
+      || textbox.value.includes('>') || textbox.value.includes('/') || textbox.value.includes('?'))*/
+      {
+        textbox.setCustomValidity('Proszę podać właściwe imię i nazwisko');
+      }
+      else {
+        textbox.setCustomValidity('');
+      }
+      return true;
+    }
+    </script>
 
     <script>
     $( "form" ).submit(function( event ) {

@@ -326,17 +326,29 @@ p > span {
   margin-left: 25px;
 }
 input {
-  padding-bottom: 10px;
+  padding: 1px 3px;
   margin-bottom: 10px;
 }
 
 textarea {
+  padding: 0 3px;
   resize: vertical;
 }
 
+#name, #email {
+  vertical-align: middle;
+  border-width: 2px;
+  border-radius: 1px;
+}
+#comment {
+  border-width: 2px;
+  border-radius: 1px;
+
+}
 .modal-body p {
   text-align: center;
 }
+
 
 .footer {
   bottom: 0;
