@@ -467,6 +467,11 @@ a.fancybox > img {
 .col-res-gal {
   width: 25%;
 }
+.container-reservation {
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+}
 @media (max-width: 1200px) {
   .col-res-gal {
     width: 33.3%;
