@@ -16,18 +16,15 @@
   <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2aEZ-V6omJorvUW3Yaz4FjCpzF3QwmMs"></script>
   <script type="text/javascript" src="resources/js/map.js"></script>
-
-      <script>
-      $(document).ready(function () {
-        var date = new Date();
-        document.getElementById('date-arrive').valueAsDate = date;
-        document.getElementById('date-arrive').min = document.getElementById('date-arrive').value;
-        date.setDate(date.getDate() + 1);
-        document.getElementById('date-go').valueAsDate = date;
-        document.getElementById('date-go').min = document.getElementById('date-arrive').value;
-      });
-      </script>
-
+  <script type="text/javascript" src="resources/js/scripts.js"></script>
+<!-- Things to full calendar --->
+  <link href='resources/css/fullcalendar.min.css' rel='stylesheet' />
+  <link href='resources/css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+  <script src='resources/js/moment.min.js'></script>
+  <!--<script src='../lib/jquery.min.js'></script>--->
+  <script src='resources/js/fullcalendar.min.js'></script>
+  <script src='resources/js/gcal.min.js'></script>
+<!-- END --->
   <title>Cullera Apartment</title>
 </head>
 
@@ -76,10 +73,10 @@
 
 
 <div class="container-reservation">
-<div class="container">
+<div class="container container-content">
 	<div class="row">
-    <h3 class="header-description">Napisz do nas</h3>
-		<div class="col-md-6">
+    <h3 class="header-description">Zachęcamy do składania zapytania w celu rezerwacji apartamentu</h3>
+		<div class="col-md-6 container-form">
     <iframe width="0" height="0" border="0" name="iframe" id="iframe" style="display: none;"></iframe>
       <form method="post" name="contactform" id="form" action="reservation.php" target="iframe">
       	<div>
@@ -100,101 +97,91 @@
       	</div>
       	<div>
       		<label for="date-arrive">Data przyjazdu<span>*</span></label>
-      		<input type="date" name="date-arrive" id="date-arrive" style="width: 100%"  oninvalid="InvalidDate(this);" oninput="InvalidDate(this);" required/>
+      		<input type="text" name="date-arrive" id="date-arrive" style="width: 100%" oninvalid="InvalidDateArrive(this);" oninput="InvalidDateArrive(this);" required/>
       	</div>
       	<div>
       		<label for="date-go">Data odjazdu<span>*</span></label>
-      		<input type="date" name="date-go" id="date-go" style="width: 100%" oninvalid="InvalidDate(this);" oninput="InvalidDate(this);" required/>
+      		<input type="text" name="date-go" id="date-go" style="width: 100%" oninvalid="InvalidDateGo(this);" oninput="InvalidDateGo(this);" required/>
       	</div>
       	<div>
       		<label for="content">Uwagi</label>
       		<textarea name="content" id="comment" rows="11" style="width: 100%" ></textarea>
       	</div>
         <div>
-      	<input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ"/>
-        <!-- data-target="#messageSent" --->
-        </div>
+          <!-- START CAPTCHA -->
+          <br>
+          <div class="capbox">
+            <div id="CaptchaDiv"></div>
+              <div class="capbox-inner">
+                Przepisz powyższą liczbę:<br>
+                <input type="hidden" id="txtCaptcha">
+                <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+              </div>
+              <span id="error"></span>
+            </div>
+            <br><br>
+          </div>
+          <!-- END CAPTCHA -->
+      <input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ"/>
         </form>
 		</div>
 
     <script>
-    function InvalidName(textbox) {
-      var re = /[-!@#$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/;
-      if(textbox.value == '') {
-        textbox.setCustomValidity('Proszę podać imię i nazwisko');
+      // Captcha Script
+      $( "form" ).submit(function( event ) {
+        var why = "";
+        if(form.CaptchaInput.value == ""){
+          why += "Proszę przepisac kod captcha\n";
+        }
+        if(form.CaptchaInput.value != ""){
+          if(ValidCaptcha(form.CaptchaInput.value) == false){
+            why += "Kod captcha nie pasuje\n";
+          }
+        }
+        if(why != ""){
+          $("#error").text(why);
+          return false;
+        }});
+      </script>
+      <script>
+      // Validate input against the generated number
+      function ValidCaptcha(){
+        var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+        var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+        if (str1 == str2){
+          if ( $( "input:first" ).val() !== "" ) {
+            $( "#messageSent").css("display","block");
+            $( "#messageSent").css("opacity","1");
+            $( "#submit-button").focus();
+          }
+          var a = Math.ceil(Math.random() * 9)+ '';
+          var b = Math.ceil(Math.random() * 9)+ '';
+          var c = Math.ceil(Math.random() * 9)+ '';
+          var d = Math.ceil(Math.random() * 9)+ '';
+          var e = Math.ceil(Math.random() * 9)+ '';
+          var code = a + b + c + d + e;
+          document.getElementById("txtCaptcha").value = code;
+          document.getElementById("CaptchaDiv").innerHTML = code;
+          $("#error").text('');
+          return true;
+        }
+        else {
+          return false;
+        }
       }
-      else if (textbox.value.search(re) > -1)
-      {
-        textbox.setCustomValidity('Proszę podać właściwe imię i nazwisko');
+      // Remove the spaces from the entered and generated code
+      function removeSpaces(string){
+        return string.split(' ').join('');
       }
-      else {
-        textbox.setCustomValidity('');
-      }
-      return true;
-    }
-    </script>
-    <script>
-    function InvalidEmail(textbox) {
-      var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+$/;
-      if(textbox.value === '') {
-        textbox.setCustomValidity('Wprowadź adres email');
-      }
-      else if (!textbox.value.match(re)) {
-        textbox.setCustomValidity('Wprowadź poprawny adres email');
-      }
-      else if (textbox.value[textbox.value.length-1] === '.') {
-        textbox.setCustomValidity('Adres email nie może się kończyć kropką')
-      }
-      else {
-        textbox.setCustomValidity("");
-      }
-      return true;
-    }
-    </script>
-    <script>
-    function InvalidTel(textbox) {
-      var re = /\+([0-9]){11}/
-      if(textbox.value === '') {
-        textbox.setCustomValidity('Wprowadź numer telefonu');
-      }
-      else if (!textbox.value.match(re)) {
-        textbox.setCustomValidity('Podaj poprawny numer telefonu');
-      }
-      else {
-        textbox.setCustomValidity("");
-      }
-      return true;
-    }
-    </script>
-    <script>
-    function InvalidDate(textbox) {
-      if(textbox.value < textbox.min) {
-        textbox.setCustomValidity("Proszę podac właściwą datę");
-      }
-      else {
-        textbox.setCustomValidity("");
-      }
-      return true;
-    }
-    </script>
+      </script>
 
-    <script>
-    $( "form" ).submit(function( event ) {
-      if ( $( "input:first" ).val() !== "" ) {
-        $( "#messageSent").css("display","block");
-        $( "#messageSent").css("opacity","1");
-        $( "#submit-button").focus();
-        return;
-      }
-    });
-    </script>
+    <div class="col-md-6 container-calendar">
+      <!--<iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffcc66&amp;src=t5rf63gkcgpdqh6tlgalta16rg%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Europe%2FWarsaw"
+      style="border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>--->
+      <div id='loading'>loading...</div>
+      <!-- https://fullcalendar.io/docs/google_calendar/ --->
+    	<div id='calendar'></div>
 
-    <div class="col-md-6 centered">
-      <img alt="Logo" class="logo-alt" src="resources/images/logo2.png" />
-      <p><img class="contact-icon" src="resources/images/address.png" alt="home-icon"/><span>Av. Alacant, 13, 46400 Cullera, Valencia, Hiszpania</span></p>
-      <p><img class="contact-icon" src="resources/images/phone.png" alt="phone-icon"/><span>+48 123456789</span></p>
-      <p><img class="contact-icon" src="resources/images/mail.png" alt="email-icon"/><span>cullera.apartment@gmail.com</span></p>
-    </div>
   </div>
   </div>
   </div>
@@ -209,20 +196,12 @@
         <p>Dziękujemy za złożenie zapytania.</br> Skontaktujemy się z Państwem w najbliższym czasie w celu potwierdzenia rezerwacji.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" onclick="close_modal();" class="btn btn-default btn-primary" id="submit-button" data-dismiss="modal">Zamknij</button>
+        <button type="button" onclick="close_modal()" class="btn btn-default btn-primary" id="submit-button" data-dismiss="modal">Zamknij</button>
       </div>
     </div>
   </div>
 </div>
 
-<script>
-function close_modal() {
-    $( "#messageSent").css("display","none");
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("comment").value = "";
-  }
-</script>
     <footer class="footer">
       <div class="container">
           <p>Copyright 2017 &copy; Cullera Apartment</p>
