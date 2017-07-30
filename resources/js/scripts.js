@@ -32,10 +32,10 @@ $('#calendar').fullCalendar({
   // THIS KEY WON'T WORK IN PRODUCTION!!!
   // To make your own Google API key, follow the directions here:
   // http://fullcalendar.io/docs/google_calendar/
-  googleCalendarApiKey: 'AIzaSyBEKuQSTrZGNYmciYXDRK3Mpun1Rbwwoc0',
+  googleCalendarApiKey: 'AIzaSyBPciQcNvyG04-L9XwZq_JTUVrk1tgQfhY',
 
   // US Holidays
-  events: 't5rf63gkcgpdqh6tlgalta16rg@group.calendar.google.com',
+  events: 'cullera.apartment@gmail.com',
 
   eventClick: function(event) {
     // opens events in a popup window

@@ -299,6 +299,7 @@ div.col-lg-8 {
 .contact {
   background-color: #fcfcff;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 #map {
     width: 100%;
@@ -421,12 +422,9 @@ textarea {
 
 /* ********************************************** */
 .footer {
-  bottom: 0;
-  width: 100%;
   height: 60px;
   background-color: #292c2f;
   color: #fff;
-  margin-top: 20px;
   text-align: center;
 }
 
@@ -502,10 +500,22 @@ h2.prices, h3.prices {
   font-size: 1.4em;
 }
 .tab-title {
-  border-bottom-style: solid;
-  border-bottom-color: black;
-  border-bottom-width: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: .7em;
 }
+
+.tab-title :nth-child(1) {
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #1A5398;
+}
+
+.tab-title :nth-child(2) {
+  font-size: 12px;
+  font-weight: bold;
+}
+
 div.tab-title > p.header-description {
   padding-top: 20px;
   font-size: 4em;
@@ -519,9 +529,10 @@ ul.ul-cennik > li {
   background-color: #F2C55C;
   background-color: #DEDEDE;
   padding-top: 90px;
+  padding-bottom: 20px;
 }
 .gallery-out {
-  display: flex;
+  display: block;
   justify-content: center;
   vertical-align: middle;
 }
@@ -529,9 +540,6 @@ ul.ul-cennik > li {
 a.fancybox > img {
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.8);
-  -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.8);
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.8);
   border-radius: 1.5%;
 }
 .col-res-gal {
