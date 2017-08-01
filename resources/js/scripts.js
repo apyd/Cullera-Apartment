@@ -1,4 +1,15 @@
 $(document).ready(function () {
+  if($('#txtCaptcha').length > 0) {
+  var a = Math.ceil(Math.random() * 9)+ '';
+  var b = Math.ceil(Math.random() * 9)+ '';
+  var c = Math.ceil(Math.random() * 9)+ '';
+  var d = Math.ceil(Math.random() * 9)+ '';
+  var e = Math.ceil(Math.random() * 9)+ '';
+  var code = a + b + c + d + e;
+  document.getElementById("txtCaptcha").value = code;
+  document.getElementById("CaptchaDiv").innerHTML = code;
+  }
+  if($('#date-arrive').length > 0) {
   var time = new Date();
   var year = time.getFullYear().toString();
   var month = (time.getMonth()+1).toString();
@@ -9,15 +20,7 @@ $(document).ready(function () {
   document.getElementById('date-arrive').min = date;
   document.getElementById('date-arrive').placeholder = document.getElementById('date-arrive').min;
   document.getElementById('date-go').placeholder = document.getElementById('date-arrive').min;
-  var a = Math.ceil(Math.random() * 9)+ '';
-  var b = Math.ceil(Math.random() * 9)+ '';
-  var c = Math.ceil(Math.random() * 9)+ '';
-  var d = Math.ceil(Math.random() * 9)+ '';
-  var e = Math.ceil(Math.random() * 9)+ '';
-  var code = a + b + c + d + e;
-  document.getElementById("txtCaptcha").value = code;
-  document.getElementById("CaptchaDiv").innerHTML = code;
-
+  }
 //Script for full calendar
 $('#calendar').fullCalendar({
 
@@ -69,10 +72,10 @@ function InvalidName(textbox) {
 function InvalidEmail(textbox) {
   var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+$/;
   if(textbox.value === '') {
-    textbox.setCustomValidity('Wprowadź adres email');
+    textbox.setCustomValidity('Proszę wprowadzić adres email');
   }
   else if (!textbox.value.match(re)) {
-    textbox.setCustomValidity('Wprowadź poprawny adres email');
+    textbox.setCustomValidity('Proszę wprowadzić poprawny adres email');
   }
   else if (textbox.value[textbox.value.length-1] === '.') {
     textbox.setCustomValidity('Adres email nie może się kończyć kropką')
@@ -83,13 +86,24 @@ function InvalidEmail(textbox) {
   return true;
 };
 
+
+function InvalidText(textbox) {
+  if(textbox.value === '') {
+    textbox.setCustomValidity('Wprowadź tekst');
+  }
+  else {
+    textbox.setCustomValidity("");
+  }
+  return true;
+};
+
 function InvalidTel(textbox) {
   var re = /\+([0-9]){11}/
   if(textbox.value === '') {
-    textbox.setCustomValidity('Wprowadź numer telefonu');
+    textbox.setCustomValidity('Proszę podać numer telefonu');
   }
   else if (!textbox.value.match(re)) {
-    textbox.setCustomValidity('Podaj poprawny numer telefonu');
+    textbox.setCustomValidity('Proszę podać poprawny numer telefonu');
   }
   else {
     textbox.setCustomValidity("");
@@ -104,10 +118,10 @@ function InvalidDateArrive(textbox) {
   var min_date = new Date(date_min[0], date_min[1], date_min[2]);
 //  alert(typeof(parseInt(test[0])));
   if (textbox.value == "") {
-    textbox.setCustomValidity("Proszę podac datę");
+    textbox.setCustomValidity("Proszę podać datę");
   }
   else if(asked_date < min_date) {
-    textbox.setCustomValidity("Proszę podac właściwą datę");
+    textbox.setCustomValidity("Proszę podać właściwą datę");
   }
   else {
     textbox.setCustomValidity("");
@@ -124,15 +138,45 @@ function InvalidDateGo(textbox) {
   var min_date = new Date(date_min[0], date_min[1], date_min[2]);
 //  alert(typeof(parseInt(test[0])));
   if (textbox.value == "") {
-    textbox.setCustomValidity("Proszę podac datę");
+    textbox.setCustomValidity("Proszę podać datę");
   }
   else if(asked_date < min_date) {
-    textbox.setCustomValidity("Proszę podac właściwą datę");
+    textbox.setCustomValidity("Proszę podać właściwą datę");
   }
   else {
     textbox.setCustomValidity("");
   }
   return true;
+};
+
+// Validate input against the generated number
+function ValidCaptcha(){
+  var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+  var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+  if (str1 == str2){
+    if ( $( "input:first" ).val() !== "" ) {
+      $( "#messageSent").css("display","block");
+      $( "#messageSent").css("opacity","1");
+      $( "#submit-button").focus();
+    }
+    var a = Math.ceil(Math.random() * 9)+ '';
+    var b = Math.ceil(Math.random() * 9)+ '';
+    var c = Math.ceil(Math.random() * 9)+ '';
+    var d = Math.ceil(Math.random() * 9)+ '';
+    var e = Math.ceil(Math.random() * 9)+ '';
+    var code = a + b + c + d + e;
+    document.getElementById("txtCaptcha").value = code;
+    document.getElementById("CaptchaDiv").innerHTML = code;
+    $("#error").text('');
+    return true;
+  }
+  else {
+    return false;
+  }
+};
+// Remove the spaces from the entered and generated code
+function removeSpaces(string){
+  return string.split(' ').join('');
 };
 
 function close_modal() {
