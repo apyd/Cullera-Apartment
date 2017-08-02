@@ -589,13 +589,15 @@ a.fancybox > img {
 }
 .container-map-localized {
   margin-bottom: 20px;
+  display: flex;
 }
 .container-localization {
   width: 40%;
   padding: 15px;
   display: inline-block;
 }
-.container-calendar-contact {
+
+.container-map-contact {
   width: 59%;
   height: auto;
   padding: 15px;
@@ -603,7 +605,17 @@ a.fancybox > img {
 }
 .container-form-address {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
+}
+.container-content-contact {
+  padding: 30px;
+  background-color: #f5df65;
+  background-color: rgba(245,223,101,0.7);
+  box-shadow:  0 0 10px 0 rgba(245,223,101,0.7);
+  padding-bottom: 20px;
+}
+.container-form-address {
+  display: flex;
 }
 .container-form-address .container-form, .container-form-address .centered {
   width: 49%;
@@ -619,20 +631,29 @@ a.fancybox > img {
 }
 .container-localization img.graphic-icon {
   width: 3.3vw;
+  max-width: 53px;
   height: 3.3vw;
+  max-height: 53px;
 }
 .container-localization p.txt {
   padding: 0;
   margin: 0;
   margin-left: 20px;
-  height: 100%;
 }
 h2.header-description {
   font-size: 25px;
   text-align: center;
 }
+.container-form > #form {
+  max-width: 540px;
+  margin: 0 auto;
+}
+.container-form > .centered {
+  margin: 0 auto;
+}
 }
 /* End of styling kontakt.html */
+
 /* Start MEDIA */
 /* Start of media.galeria.html*/
 @media (max-width: 1200px) {
@@ -833,7 +854,6 @@ h2.header-description {
  .contrast {
     display:block;
  }
-
  a.positioned {
    margin-top: -10px;
    position: static;
@@ -956,25 +976,25 @@ h2.header-description {
       margin-top: 0px;
     }
     li.dropdown > a > img {
-  margin-top: 0;
-  vertical-align: middle;
-  }
-  .navbar-inverse .navbar-nav > li > a:hover,
-  .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > .open > a,
- .navbar-inverse .navbar-nav > .open > a:hover,
- .navbar-inverse .navbar-nav > .open > a:focus,
- .Reservation:hover,
- .Reservation:focus {
-  background-color: #001D4A;
-  }
-  /* End of media.nav */
-  /* Start of media.cennik.html */
-  .cennik {
-  padding-top: 65px;
-  }
-  .col-res {
-  width: 50%;
-  }
+      margin-top: 0;
+      vertical-align: middle;
+    }
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > .open > a,
+    .navbar-inverse .navbar-nav > .open > a:hover,
+    .navbar-inverse .navbar-nav > .open > a:focus,
+    .Reservation:hover,
+    .Reservation:focus {
+      background-color: #001D4A;
+    }
+    /* End of media.nav */
+    /* Start of media.cennik.html */
+    .cennik {
+      padding-top: 65px;
+    }
+    .col-res {
+      width: 50%;
+    }
   .col-res:nth-child(5) {
   width: 100%;
   }
@@ -1010,7 +1030,7 @@ h2.header-description {
     padding-right: 0;
   }
   .container-form-address .container-form, .container-form-address .centered,
-  .container-localization, .container-calendar-contact {
+  .container-localization, .container-calendar-contact, .container-map-contact {
   width: 100%;
   }
   .container-info {
@@ -1023,6 +1043,17 @@ h2.header-description {
   }
   h3.header-description-contact {
     padding: 10px;
+  }
+  .container-localization img.graphic-icon {
+    width: 5vw;
+    height: 5vw;
+  }
+  .container-form-address, .container-map-localized {
+    flex-direction: column;
+  }
+  .container-form-address > .centered {
+    margin: 20px auto;
+    text-align: center;
   }
 /* End of media.kontakt.html */
 }
@@ -1121,6 +1152,7 @@ h2.header-description {
     margin-top: 20px;
     width: 100%;
   }
+  /* End of media.rezerwacja.html */
   /* Start of media.kontakt.html */
     .container-form-address .container-form, .container-form-address .centered,
     .container-localization, .container-calendar-contact {
@@ -1135,6 +1167,12 @@ h2.header-description {
 
 }
 @media(max-width: 576px) {
+  .col-xs-6, .col-sm-6, .col-md-4, .col-lg-2 {
+      height: 120px;
+  }
+  a.positioned {
+    font-size: 4vw;
+  }
   /* Start of media.galeria.html */
   .col-res {
     width: 100%;
@@ -1152,6 +1190,16 @@ h2.header-description {
   .fc-center h2 {
     font-size: 1.5em;
   }
+  /* End of media.rezerwacja.html */
+}
+@media(max-width: 420px) {
+  /* Start of media.index.html */
+  a.positioned {
+    height: 44px;
+    width: 195px;
+    font-size: 16.8px;
+  }
+  /* End of media.index.html */
 }
 
 .nav-background {

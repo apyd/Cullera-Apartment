@@ -9,12 +9,14 @@
   <!--  Tells crawlers how to crawl this page, and the role of this page. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   --->
   <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
   <script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2aEZ-V6omJorvUW3Yaz4FjCpzF3QwmMs"></script>
+
   <script type="text/javascript" src="resources/js/map.js"></script>
   <script type="text/javascript" src="resources/js/scripts.js"></script>
 
@@ -34,19 +36,19 @@
           <span class="icon-bar"></span>
         </button>
         <div class="navbar-brand">
-          <a href="#"><img alt="Logo" class="logo" src="resources/images/logo.png" /></a>
+          <a href="index.html"><img alt="Logo" class="logo" src="resources/images/logo.png" /></a>
         </div>
       </div>
       <div class="collapse navbar-collapse navbar-right navbar-positioned">
         <section>
           <nav class="fill">
             <ul class="nav navbar-nav navbar-right">
-              <li> <a href="#">Oferta</a> </li>
-              <li> <a href="#">Atrakcje</a> </li>
-              <li> <a href="#">Cennik</a> </li>
-              <li> <a href="#">Galeria</a> </li>
-              <li> <a href="#">Kontakt</a> </li>
-              <li> <a href="#" class="Reservation">Rezerwacja</a> </li>
+              <li> <a href="oferta.html">Oferta</a> </li>
+              <li> <a href="atrakcje.html">Atrakcje</a> </li>
+              <li> <a href="cennik.html">Cennik</a> </li>
+              <li> <a href="galeria.html">Galeria</a> </li>
+              <li> <a href="kontakt.html">Kontakt</a> </li>
+              <li> <a href="rezerwacja.html" class="Reservation">Rezerwacja</a> </li>
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="resources/images/pl.png"</img><b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -67,10 +69,9 @@
 
 <div class="container-contact">
 <div class="container container-content">
+  <h3 class="header-description">Kontakt i lokalizacja</h3>
   <div class="container-map-localized">
-	<div class="row">
-    <h2 class="header-description">Kontakt i lokalizacja</h2>
-    <div class="col-md-6 container-calendar-contact">
+    <div class="col-md-6 container-map-contact">
       <div class="map">
       <div class="row">
         <div id="map"></div>
@@ -100,8 +101,10 @@
         <p class="txt">Plaża w odległości s</p>
       </div>
     </div>
+
   </div>
-  </div>
+</div>
+<div class="container container-content container-content-contact">
       <h3 class="header-description header-description-contact">Zachęcamy do kontaktowania się z nami w razie wątpliwości</h3>
   <div class="row container-form-address">
     <div class="col-md-6 container-form">
