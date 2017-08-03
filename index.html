@@ -9,7 +9,7 @@
   <!--  Tells crawlers how to crawl this page, and the role of this page. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
   <script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
@@ -17,14 +17,12 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2aEZ-V6omJorvUW3Yaz4FjCpzF3QwmMs"></script>
   <script type="text/javascript" src="resources/js/map.js"></script>
   <script type="text/javascript" src="resources/js/scripts.js"></script>
-  <script>
-    $(function() {
-      $(document).scroll(function() {
-        var $nav = $(".navbar-fixed-top");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-      });
-    });
-  </script>
+  <script>$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});</script>
   <title>Cullera Apartment</title>
 </head>
 
@@ -33,7 +31,8 @@
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-positioned" id="button-nav">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target=".navbar-positioned" id="button-nav">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -45,7 +44,9 @@
     </a>
         </div>
       </div>
+<main>
 
+</main>
       <div class="collapse navbar-collapse navbar-right navbar-positioned">
         <section>
           <nav class="fill">
@@ -68,7 +69,6 @@
                 </ul>
               </li>
             </ul>
-          </nav>
         </section>
       </div>
     </div>
@@ -112,159 +112,163 @@
       </div>
     </div>
 
-    <article class="icons-box shadow">
-      <h3 class="header-description">Warto tutaj być!</h3>
-      <p class="short-description">Dla naszych gości przygotowaliśmy mieszkanie w doskonałej lokalizacji!</p>
+    <section class="icons-box shadow">
+      <header>
+    <h3 class="header-description">Warto tutaj być!</h3>
+    </header>
+    <p class="short-description">Dla naszych gości przygotowaliśmy mieszkanie w doskonałej lokalizacji!</p>
       <div class="container">
         <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <img class="graphic-icon" src="resources/images/localisation.png" alt="localisation" />
-            <p class="txt">Słoneczna Hiszpania</p>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <img class="graphic-icon" src="resources/images/beach.png" alt="beach" />
-            <p class="txt">50 metrów od plaży</p>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <img class="graphic-icon" src="resources/images/bed.png" alt="bed" />
-            <p class="txt">Mieszkanie dla 6 osób</p>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <img class="graphic-icon" src="resources/images/pool.png" alt="pool" />
-            <p class="txt">Dostępny basen</p>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <img class="graphic-icon" src="resources/images/gym.png" alt="gym" />
-            <p class="txt">Ośrodki rekreacyjne</p>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <img class="graphic-icon" src="resources/images/elevator.png" alt="elevator" />
-            <p class="txt">Winda w budynku</p>
-          </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
+          <img class="graphic-icon" src="resources/images/localisation.png" alt="localisation"/>
+          <p class="txt">Słoneczna Hiszpania</p>
         </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
+          <img class="graphic-icon" src="resources/images/beach.png" alt="beach"/>
+          <p class="txt">50 metrów od plaży</p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
+          <img class="graphic-icon" src="resources/images/bed.png" alt="bed"/>
+          <p class="txt">Mieszkanie dla 6 osób</p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
+          <img class="graphic-icon" src="resources/images/pool.png" alt="pool"/>
+          <p class="txt">Dostępny basen</p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
+          <img class="graphic-icon" src="resources/images/gym.png" alt="gym"/>
+          <p class="txt">Ośrodki rekreacyjne</p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">
+          <img class="graphic-icon" src="resources/images/elevator.png" alt="elevator"/>
+          <p class="txt">Winda w budynku</p>
+        </div>
+    </div>
       </div>
-    </article>
+    </section>
 
     <article class="action-box shadow">
       <div class="container">
         <div class="row">
+          <header>
           <h3 class="header-description contrast">Szukasz noclegu w Hiszpanii? Nie szukaj dalej!</h3>
+          </header>
           <a class="btn btn-lg btn-primary positioned" href="#" role="button">Zarezerwuj termin</a>
-        </div>
-      </div>
-    </article>
+    </div>
+  </div>
+</article>
 
-    <article class="description-box">
+    <section class="description-box">
       <div class="container">
         <div class="row">
+          <header>
           <h3 class="header-description">Hiszpańska Cullera</h3>
-          <p class="short-description">Cullera to hiszpańska miejscowość turystyczna położona w prowincji Walencja w Hiszpanii.</br> Pogoda dopisuje praktycznie przez cały rok, miesiące letnie są ciepłe i słoneczne.</p>
-          <img src="resources/images/sun.png" />
-          <p class="short-description">Miasto stanowi doskonałe miejsce odpoczynku dla osób pragnących uciec od wielkomiejskiej codzienności.</br> To miejscowość również dla miłośników historii i poszukiwaczy interesujących zabytków.</p>
+          </header>
+    <p class="short-description">Cullera to hiszpańska miejscowość turystyczna położona w prowincji Walencja w Hiszpanii.</br> Pogoda dopisuje praktycznie przez cały rok, miesiące letnie są ciepłe i słoneczne.</p>
+    <img src="resources/images/sun.png"/>
+    <p class="short-description">Miasto stanowi doskonałe miejsce odpoczynku dla osób pragnących uciec od wielkomiejskiej codzienności.</br> To miejscowość również dla miłośników historii i poszukiwaczy interesujących zabytków.</p>
+    </div>
+  </div>
+</section>
+
+    <section class="map">
+    <div class="row">
+  <div id="map"></div>
+</div>
+</section>
+
+<section class="contact">
+<div class="container">
+	<div class="row">
+    <h3 class="header-description">Napisz do nas</h3>
+		<div class="col-md-6">
+    <iframe width="0" height="0" border="0" name="iframe" id="iframe" style="display: none;"></iframe>
+      <form method="post" name="contactform" id="form" action="kontakt.php" target="iframe">
+        <div>
+          <label for="name">Imię i nazwisko<span>*</span></label>
+          <input type="text" name="name" id="name" style="width: 100%" placeholder="Jan Kowalski" oninvalid="InvalidName(this);" oninput="InvalidName(this);" required/>
         </div>
-      </div>
-    </article>
-
-    <article class="map">
-      <div class="row">
-        <div id="map"></div>
-      </div>
-    </article>
-
-    <article class="contact">
-      <div class="container">
-        <div class="row">
-          <h3 class="header-description">Napisz do nas</h3>
-          <div class="col-md-6">
-            <iframe width="0" height="0" border="0" name="iframe" id="iframe" style="display: none;"></iframe>
-            <form method="post" name="contactform" id="form" action="kontakt.php" target="iframe">
-              <div>
-                <label for="name">Imię i nazwisko<span>*</span></label>
-                <input type="text" name="name" id="name" style="width: 100%" placeholder="Jan Kowalski" oninvalid="InvalidName(this);" oninput="InvalidName(this);" required/>
-              </div>
-              <div>
-                <label for="email">Email<span>*</span></label>
-                <input type="email" name="email" id="email" style="width: 100%" placeholder="jan@example.com" oninvalid="InvalidEmail(this);" oninput="InvalidEmail(this);" required/>
-              </div>
-              <div>
-                <label for="content">Treść korespondencji<span>*</span></label>
-                <textarea name="content" id="comment" rows="11" style="width: 100%" placeholder="Treść wiadomości" oninvalid="InvalidText(this);" oninput="InvalidText(this);" required></textarea>
-              </div>
-              <div>
-                <!-- START CAPTCHA -->
-                <br>
-                <div class="capbox">
-                  <div id="CaptchaDiv"></div>
-                  <div class="capbox-inner">
-                    Przepisz powyższą liczbę:<br>
-                    <input type="hidden" id="txtCaptcha">
-                    <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
-                  </div>
-                  <span id="error"></span>
-                </div>
-              </div>
-              <div>
-                <input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ" />
-                <!-- data-target="#messageSent" --->
-              </div>
-            </form>
-          </div>
-
-          <script>
-            // Captcha Script
-            $("form").submit(function(event) {
-              var why = "";
-              if (form.CaptchaInput.value == "") {
-                why += "Proszę przepisać kod captcha\n";
-              }
-              if (form.CaptchaInput.value != "") {
-                if (ValidCaptcha(form.CaptchaInput.value) == false) {
-                  why += "Kod captcha nie pasuje\n";
-                }
-              }
-              if (why != "") {
-                $("#error").text(why);
-                return false;
-              }
-            });
-          </script>
-
-
-
-          <section class="col-md-6 centered">
-            <img alt="Logo" class="logo-alt" src="resources/images/logo2.png" />
-            <p><img class="contact-icon" src="resources/images/address.png" alt="home-icon" /><span>Av. Alacant, 13, 46400 Cullera, Valencia, Hiszpania</span></p>
-            <p><img class="contact-icon" src="resources/images/phone.png" alt="phone-icon" /><span>+48 123456789</span></p>
-            <p><img class="contact-icon" src="resources/images/mail.png" alt="email-icon" /><span>cullera.apartment@gmail.com</span></p>
-          </section>
+        <div>
+          <label for="email">Email<span>*</span></label>
+          <input type="email" name="email" id="email" style="width: 100%" placeholder="jan@example.com" oninvalid="InvalidEmail(this);" oninput="InvalidEmail(this);" required/>
         </div>
-      </div>
-    </article>
-
-    <!-- Modal -->
-    <div class="modal fade" id="messageSent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
+      	<div>
+      		<label for="content">Treść korespondencji<span>*</span></label>
+      		<textarea name="content" id="comment" rows="11" style="width: 100%" placeholder="Treść wiadomości" oninvalid="InvalidText(this);" oninput="InvalidText(this);" required></textarea>
+      	</div>
+        <div>
+          <!-- START CAPTCHA -->
+          <br>
+          <div class="capbox">
+            <div id="CaptchaDiv"></div>
+              <div class="capbox-inner">
+                Przepisz powyższą liczbę:<br>
+                <input type="hidden" id="txtCaptcha">
+                <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+              </div>
+              <span id="error"></span>
+            </div>
           </div>
-          <div class="modal-body">
-            <p>Dziękujemy za wiadomość.</br> Skontaktujemy się z Państwem w najbliższym czasie.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" onclick="close_modal();" class="btn btn-default btn-primary" data-dismiss="modal">Zamknij</button>
-          </div>
+        <div>
+      	<input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ"/>
+        <!-- data-target="#messageSent" --->
         </div>
+        </form>
+		</div>
+
+    <script>
+      // Captcha Script
+      $( "form" ).submit(function( event ) {
+        var why = "";
+        if(form.CaptchaInput.value == ""){
+          why += "Proszę przepisać kod captcha\n";
+        }
+        if(form.CaptchaInput.value != ""){
+          if(ValidCaptcha(form.CaptchaInput.value) == false){
+            why += "Kod captcha nie pasuje\n";
+          }
+        }
+        if(why != ""){
+          $("#error").text(why);
+          return false;
+        }});
+      </script>
+
+
+
+    <div class="col-md-6 centered">
+      <img alt="Logo" class="logo-alt" src="resources/images/logo2.png" />
+      <p><img class="contact-icon" src="resources/images/address.png" alt="home-icon"/><span>Av. Alacant, 13, 46400 Cullera, Valencia, Hiszpania</span></p>
+      <p><img class="contact-icon" src="resources/images/phone.png" alt="phone-icon"/><span>+48 123456789</span></p>
+      <p><img class="contact-icon" src="resources/images/mail.png" alt="email-icon"/><span>cullera.apartment@gmail.com</span></p>
+    </div>
+  </div>
+  </div>
+</section>
+</main>
+<!-- Modal -->
+<div class="modal fade" id="messageSent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <p>Dziękujemy za wiadomość.</br> Skontaktujemy się z Państwem w najbliższym czasie.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="close_modal();" class="btn btn-default btn-primary" data-dismiss="modal">Zamknij</button>
       </div>
     </div>
+  </div>
+</div>
 
 
     <footer class="footer">
       <div class="container">
-        <p>Copyright 2017 &copy; Cullera Apartment</p>
+          <p>Copyright 2017 &copy; Cullera Apartment</p>
       </div>
     </footer>
 
 </body>
 <!-- https://dev.w3.org/html5/spec-preview/states-of-the-type-attribute.html#valid-e-mail-address --->
-
 </html>
