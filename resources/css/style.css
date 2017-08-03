@@ -632,8 +632,10 @@ a.fancybox > img {
 .container-localization img.graphic-icon {
   width: 3.3vw;
   max-width: 53px;
+  min-width: 15px;
   height: 3.3vw;
   max-height: 53px;
+  min-height: 15px;
 }
 .container-localization p.txt {
   padding: 0;
@@ -651,9 +653,105 @@ h2.header-description {
 .container-form > .centered {
   margin: 0 auto;
 }
-}
-/* End of styling kontakt.html */
 
+/* End of styling kontakt.html */
+/* Start of styling oferta.html */
+
+.container-offer {
+  padding-top: 90px;
+}
+.container-offer h3.header-description {
+  padding: 10px 20px;
+}
+.container-offer > .container-content {
+  display: flex;
+  padding-bottom: 10px;
+}
+.container-description {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  padding-bottom: 10px;
+}
+.container-apartment-description {
+  width: 100%;
+  padding: 10px 20px;
+}
+.container-details {
+  width: 25%;
+  margin: auto 0;
+  align-items: center;
+}
+.container-details > .container-details-centered {
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.7);
+  padding: 10px;
+  max-width: 240px;
+  margin: 0 auto;
+}
+.apartment-details > img {
+  width: 50px;
+  height: 50px;
+}
+.container-details  p.txt {
+  padding-top: 0;
+}
+
+div.details > p {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+}
+div.details > p.answer {
+  float: right;
+}
+.container-whatsin {
+  background-color: rgba(245,223,101,0.7);
+  box-shadow:  0 0 10px 0 rgba(245,223,101,0.7);
+  padding-bottom: 20px;
+}
+.container-apartment-whatsin > .row {
+  width: 80%;
+  margin: 0 auto;
+}
+.container-apartment-whatsin img.graphic-icon {
+  width: 1.3vw;
+  max-width: 53px;
+  min-width: 15px;
+  height: 1.3vw;
+  max-height: 53px;
+  min-height: 15px;
+}
+.container-apartment-whatsin > .row >.container-info {
+  margin: 0;
+  height: 60px;
+  margin: 0 auto;
+  width: 25%;
+}
+.container-apartment-whatsin > .row > .container-info p.txt > span {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+.container-apartment-whatsin > .row > .container-info p.txt {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: normal;
+}
+.container-apartment-whatsin > .row >.container-info-additional {
+  width: 33%;
+  border-left: 2px dashed;
+  justify-content: center;
+}
+.container-apartment-whatsin > .row >.container-info-additional:last-child {
+    border-right: 2px dashed;
+}
+/* End of styling oferta.html */
 /* Start MEDIA */
 /* Start of media.galeria.html*/
 @media (max-width: 1200px) {
@@ -749,6 +847,23 @@ h2.header-description {
   margin-right: 0;
   }
   /* End of media.rezerwacja.html */
+  /* Start of media.oferta.html */
+  .container-offer .container-content {
+    padding: 10px;
+    padding-bottom: 10px;
+  }
+  .container-description {
+    width: 70%;
+  }
+  .container-details {
+    width: 30%;
+  }
+  div.details > p {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+  }
+/* End of media.oferta.html */
 }
 @media (width: 992px) {
   h1 {
@@ -820,15 +935,33 @@ h2.header-description {
     margin-right: 0;
   }
   /* End of media.rezerwacja.html */
-}
-@media screen and (max-height: 500px) {
-  h1 {
-    font-size: 2em;
+  /* Start of media.oferta.html */
+  .container-offer .container-content {
+    padding: 10px;
+    padding-bottom: 10px;
   }
-  h3 {
-    font-size: 1.2em;
+  .container-description {
+    width: 70%;
+  }
+  .container-details {
+    width: 30%;
+  }
+  div.details > p {
+    font-size: 13px;
+  }
+/* End of media.oferta.html */
+}
+@media (max-width: 909px) {
+  #swimming-pool {
+    width:  150px;
   }
 }
+@media (width: 909px) {
+  #swimming-pool {
+    width:  150px;
+  }
+}
+
 @media (max-width: 768px) {
   .graphic-icon {
     width: 25%;
@@ -1021,7 +1154,7 @@ h2.header-description {
   width: 100%;
   }
   /* End of media.rezerwacja.html */
-/* Start of media.kontakt.html */
+  /* Start of media.kontakt.html */
   .container-contact {
     padding-top: 65px;
   }
@@ -1055,7 +1188,23 @@ h2.header-description {
     margin: 20px auto;
     text-align: center;
   }
-/* End of media.kontakt.html */
+  /* End of media.kontakt.html */
+  /* Start of media.oferta.html */
+  .container-offer > .container-content {
+  flex-direction: column;
+  padding: 20px;
+  }
+  .container-description {
+  width: 100%;
+  }
+  .container-details {
+  width: 100%;
+  }
+  .container-apartment-whatsin > .row {
+  width: 100%;
+  padding: 0 20px;
+  }
+  /* End of media.oferta.html */
 }
 @media (width: 768px) {
   /* Start of media.nav */
@@ -1164,7 +1313,56 @@ h2.header-description {
       margin-right: auto;
     }
   /* End of media.kontakt.html */
-
+  /* Start of media.oferta.html */
+  .container-offer > .container-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .container-description {
+    width: 100%;
+  }
+  .container-details {
+    width: 100%;
+  }
+  .container-apartment-whatsin > .row {
+    width: 100%;
+    padding: 0 20px;
+  }
+  /* End of media.oferta.html */
+}
+@media (max-width: 685px) {
+  /* Start of media.oferta.html */
+  .container-apartment-whatsin > .row > .container-info {
+    width: 33%;
+  }
+  /* End of media.oferta.html */
+}
+@media (width: 685px) {
+  /* Start of media.oferta.html */
+  .container-apartment-whatsin > .row > .container-info {
+    width: 33%;
+  }
+  /* End of media.oferta.html */
+}
+@media (max-width: 645px) {
+  #basketball-court {
+    width: 94px;
+  }
+}
+@media (width: 645px) {
+  #basketball-court {
+    width: 94px;
+  }
+}
+@media (max-width: 602px) {
+  #swimming-pool {
+    width: 130px;
+  }
+}
+@media (width: 602px) {
+  #swimming-pool {
+    width: 130px;
+  }
 }
 @media(max-width: 576px) {
   .col-xs-6, .col-sm-6, .col-md-4, .col-lg-2 {
@@ -1191,6 +1389,88 @@ h2.header-description {
     font-size: 1.5em;
   }
   /* End of media.rezerwacja.html */
+  /* Start of media.oferta.html */
+  .container-apartment-whatsin > .row > .container-info p.txt {
+    font-size: 13px;
+  }
+  /* End of media.oferta.html */
+}
+@media(width: 576px) {
+  .col-xs-6, .col-sm-6, .col-md-4, .col-lg-2 {
+      height: 120px;
+  }
+  a.positioned {
+    font-size: 4vw;
+  }
+  /* Start of media.galeria.html */
+  .col-res {
+    width: 100%;
+  }
+  .col-res-gal {
+    width: 100%;
+  }
+  /* End of media.galeria.html */
+  /* Start of media.rezerwacja.html */
+  .fc-left, .fc-right {
+    display: block;
+    margin: 0 auto;
+    font-size: 0.7em;
+  }
+  .fc-center h2 {
+    font-size: 1.5em;
+  }
+  /* End of media.rezerwacja.html */
+  /* Start of media.oferta.html */
+  .container-apartment-whatsin > .row > .container-info p.txt {
+    font-size: 13px;
+  }
+  /* End of media.oferta.html */
+}
+@media(max-width: 550px) {
+  .container-apartment-whatsin > .row > .container-info-additional {
+    width: 100%;
+    border: none;
+  }
+  .container-apartment-whatsin > .row >.container-info-additional:last-child {
+    border: none;
+  }
+    #tennis-court, #swimming-pool, #basketball-court {
+    width: 100%;
+  }
+}
+@media(width: 550px) {
+  .container-apartment-whatsin > .row > .container-info-additional {
+    width: 100%;
+    border: none;
+  }
+  .container-apartment-whatsin > .row >.container-info-additional:last-child {
+    border: none;
+  }
+    #tennis-court, #swimming-pool, #basketball-court {
+    width: 100%;
+  }
+}
+@media(max-width: 520px) {
+  /* Start of media.oferta.html */
+  .container-apartment-whatsin > .row > .container-info {
+    width: 50%;
+  }
+  .container-apartment-whatsin > .row > .container-info-additional {
+    width: 100%;
+    border: none;
+  }
+  /* End of media.oferta.html */
+}
+@media(width: 520px) {
+  /* Start of media.oferta.html */
+  .container-apartment-whatsin > .row > .container-info {
+    width: 50%;
+  }
+  .container-apartment-whatsin > .row > .container-info-additional {
+    width: 100%;
+    border: none;
+  }
+  /* End of media.oferta.html */
 }
 @media(max-width: 420px) {
   /* Start of media.index.html */
@@ -1201,7 +1481,23 @@ h2.header-description {
   }
   /* End of media.index.html */
 }
-
+@media(width: 420px) {
+  /* Start of media.index.html */
+  a.positioned {
+    height: 44px;
+    width: 195px;
+    font-size: 16.8px;
+  }
+  /* End of media.index.html */
+}
+@media screen and (max-height: 500px) {
+  h1 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+}
 .nav-background {
   background-color: #1A5398;
 }
