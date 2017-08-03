@@ -57,144 +57,136 @@
                       <li><a href="bonjour"><img src="resources/images/fr.png"</img></a></li>
                     </div>
                   </ul>
-                </li>
-              </ul>
+            </nav>
+            </li>
+            </ul>
+    </nav>
+    </section>
+    </div>
+    </div>
+    </nav>
+
+    <article class="container-contact">
+      <section class="container container-content">
+        <h3 class="header-description">Kontakt i lokalizacja</h3>
+        <div class="container-map-localized">
+          <div class="col-md-6 container-map-contact">
+            <div class="map">
+              <div class="row">
+                <div id="map"></div>
+              </div>
+          </div>
+          </div>
+          <div class="col container-localization">
+            <p class="txt header-localization">Apartament znajduje się w bardzo dobrej lokalizacji, wokół której znajdują się:</p>
+            <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
+              <img class="graphic-icon" src="resources/images/bus-stop.png" alt="bus stop" />
+              <p class="txt">Przystanek autobusowy w odległości x</p>
+            </div>
+            <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
+              <img class="graphic-icon" src="resources/images/tram-stop.png" alt="tram stop" />
+              <p class="txt">Przystanek tramwajowy w odległości y</p>
+            </div>
+            <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
+              <img class="graphic-icon" src="resources/images/train-on-rails.png" alt="train station" />
+              <p class="txt">Stacja kolejowa w odległości z</p>
+            </div>
+            <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
+              <img class="graphic-icon" src="resources/images/subway.png" alt="metro station" />
+              <p class="txt">Przystanek metro w odległości t</p>
+            </div>
+            <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
+              <img class="graphic-icon" src="resources/images/beach_contact.png" alt="beach" />
+              <p class="txt">Plaża w odległości s</p>
+            </div>
+            <!-- Lotnisko jeszcze! --->
+          </div>
+        </div>
+      </section>
+      <div class="container container-content container-content-contact">
+        <h3 class="header-description header-description-contact">Zachęcamy do kontaktowania się z nami w razie wątpliwości</h3>
+        <div class="row container-form-address">
+          <section class="col-md-6 container-form">
+            <iframe width="0" height="0" border="0" name="iframe" id="iframe" style="display: none;"></iframe>
+            <form method="post" name="contactform" id="form" action="reservation.php" target="iframe">
+              <div>
+                <label for="name">Imię i nazwisko<span>*</span></label>
+                <input type="text" name="name" id="name" style="width: 100%" placeholder="Jan Kowalski" oninvalid="InvalidName(this);" oninput="InvalidName(this);" required/>
+              </div>
+              <div>
+                <label for="email">Email<span>*</span></label>
+                <input type="email" name="email" id="email" style="width: 100%" placeholder="jan@example.com" oninvalid="InvalidEmail(this);" oninput="InvalidEmail(this);" required/>
+              </div>
+              <div>
+                <label for="content">Treść korespondencji<span>*</span></label>
+                <textarea name="content" id="comment" rows="11" style="width: 100%" oninvalid="InvalidText(this);" oninput="InvalidText(this);" required></textarea>
+              </div>
+              <div>
+                <!-- START CAPTCHA -->
+                <br>
+                <div class="capbox">
+                  <div id="CaptchaDiv"></div>
+                  <div class="capbox-inner">
+                    Przepisz powyższą liczbę:<br>
+                    <input type="hidden" id="txtCaptcha">
+                    <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+                  </div>
+                  <span id="error"></span>
+                </div>
+              </div>
+              <!-- END CAPTCHA -->
+              <input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ" />
+            </form>
+          </section>
+          <section class="col-md-6 centered">
+            <img alt="Logo" class="logo-alt" src="resources/images/logo2.png" />
+            <p><img class="contact-icon" src="resources/images/address.png" alt="home-icon" /><span>Av. Alacant, 13, 46400 Cullera, Valencia, Hiszpania</span></p>
+            <p><img class="contact-icon" src="resources/images/phone.png" alt="phone-icon" /><span>+48 123456789</span></p>
+            <p><img class="contact-icon" src="resources/images/mail.png" alt="email-icon" /><span>cullera.apartment@gmail.com</span></p>
           </section>
         </div>
+
       </div>
-      </nav>
-
-      <article>
-        <div class="container-contact">
-          <div class="container container-content">
-            <h3 class="header-description">Kontakt i lokalizacja</h3>
-            <div class="container-map-localized">
-              <section>
-                <div class="col-md-6 container-map-contact">
-                  <div class="map">
-                    <div class="row">
-                      <div id="map"></div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <div class="col container-localization">
-                  <p class="txt header-localization">Apartament znajduje się w bardzo dobrej lokalizacji, wokół której znajdują się:</p>
-                  <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
-                    <img class="graphic-icon" src="resources/images/bus-stop.png" alt="bus stop" />
-                    <p class="txt">Przystanek autobusowy w odległości x</p>
-                  </div>
-                  <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
-                    <img class="graphic-icon" src="resources/images/tram-stop.png" alt="tram stop" />
-                    <p class="txt">Przystanek tramwajowy w odległości y</p>
-                  </div>
-                  <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
-                    <img class="graphic-icon" src="resources/images/train-on-rails.png" alt="train station" />
-                    <p class="txt">Stacja kolejowa w odległości z</p>
-                  </div>
-                  <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
-                    <img class="graphic-icon" src="resources/images/subway.png" alt="metro station" />
-                    <p class="txt">Przystanek metro w odległości t</p>
-                  </div>
-                  <div class="container-info row-xs-6 row-sm-6 row-md-4 row-lg-2">
-                    <img class="graphic-icon" src="resources/images/beach_contact.png" alt="beach" />
-                    <p class="txt">Plaża w odległości s</p>
-                  </div>
-                  <!-- Lotnisko jeszcze! --->
-                </div>
-              </section>
-            </div>
+    </article>
+    <script>
+      // Captcha Script
+      $("form").submit(function(event) {
+        var why = "";
+        if (form.CaptchaInput.value == "") {
+          why += "Proszę przepisac kod captcha\n";
+        }
+        if (form.CaptchaInput.value != "") {
+          if (ValidCaptcha(form.CaptchaInput.value) == false) {
+            why += "Kod captcha nie pasuje\n";
+          }
+        }
+        if (why != "") {
+          $("#error").text(why);
+          return false;
+        }
+      });
+    </script>
+    <!-- Modal -->
+    <div class="modal fade" id="messageSent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
           </div>
-          <div class="container container-content container-content-contact">
-            <h3 class="header-description header-description-contact">Zachęcamy do kontaktowania się z nami w razie wątpliwości</h3>
-            <div class="row container-form-address">
-              <section>
-                <div class="col-md-6 container-form">
-                  <iframe width="0" height="0" border="0" name="iframe" id="iframe" style="display: none;"></iframe>
-                  <form method="post" name="contactform" id="form" action="reservation.php" target="iframe">
-                    <div>
-                      <label for="name">Imię i nazwisko<span>*</span></label>
-                      <input type="text" name="name" id="name" style="width: 100%" placeholder="Jan Kowalski" oninvalid="InvalidName(this);" oninput="InvalidName(this);" required/>
-                    </div>
-                    <div>
-                      <label for="email">Email<span>*</span></label>
-                      <input type="email" name="email" id="email" style="width: 100%" placeholder="jan@example.com" oninvalid="InvalidEmail(this);" oninput="InvalidEmail(this);" required/>
-                    </div>
-                    <div>
-                      <label for="content">Treść korespondencji<span>*</span></label>
-                      <textarea name="content" id="comment" rows="11" style="width: 100%" oninvalid="InvalidText(this);" oninput="InvalidText(this);" required></textarea>
-                    </div>
-                    <div>
-                      <!-- START CAPTCHA -->
-                      <br>
-                      <div class="capbox">
-                        <div id="CaptchaDiv"></div>
-                        <div class="capbox-inner">
-                          Przepisz powyższą liczbę:<br>
-                          <input type="hidden" id="txtCaptcha">
-                          <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
-                        </div>
-                        <span id="error"></span>
-                      </div>
-                    </div>
-                    <!-- END CAPTCHA -->
-                    <input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ" />
-                  </form>
-                </div>
-              </section>
-              <section>
-                <div class="col-md-6 centered">
-                  <img alt="Logo" class="logo-alt" src="resources/images/logo2.png" />
-                  <p><img class="contact-icon" src="resources/images/address.png" alt="home-icon" /><span>Av. Alacant, 13, 46400 Cullera, Valencia, Hiszpania</span></p>
-                  <p><img class="contact-icon" src="resources/images/phone.png" alt="phone-icon" /><span>+48 123456789</span></p>
-                  <p><img class="contact-icon" src="resources/images/mail.png" alt="email-icon" /><span>cullera.apartment@gmail.com</span></p>
-                </div>
-              </section>
-            </div>
-
+          <div class="modal-body">
+            <p>Dziękujemy za złożenie zapytania.</br> Skontaktujemy się z Państwem w najbliższym czasie w celu potwierdzenia rezerwacji.</p>
           </div>
-        </div>
-      </article>
-      <script>
-        // Captcha Script
-        $("form").submit(function(event) {
-          var why = "";
-          if (form.CaptchaInput.value == "") {
-            why += "Proszę przepisac kod captcha\n";
-          }
-          if (form.CaptchaInput.value != "") {
-            if (ValidCaptcha(form.CaptchaInput.value) == false) {
-              why += "Kod captcha nie pasuje\n";
-            }
-          }
-          if (why != "") {
-            $("#error").text(why);
-            return false;
-          }
-        });
-      </script>
-      <!-- Modal -->
-      <div class="modal fade" id="messageSent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-            </div>
-            <div class="modal-body">
-              <p>Dziękujemy za złożenie zapytania.</br> Skontaktujemy się z Państwem w najbliższym czasie w celu potwierdzenia rezerwacji.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" onclick="close_modal()" class="btn btn-default btn-primary" id="submit-button" data-dismiss="modal">Zamknij</button>
-            </div>
+          <div class="modal-footer">
+            <button type="button" onclick="close_modal()" class="btn btn-default btn-primary" id="submit-button" data-dismiss="modal">Zamknij</button>
           </div>
         </div>
       </div>
+    </div>
 
-      <footer class="footer">
-        <div class="container">
-          <p>Copyright 2017 &copy; Cullera Apartment</p>
-        </div>
-      </footer>
+    <footer class="footer">
+      <div class="container">
+        <p>Copyright 2017 &copy; Cullera Apartment</p>
+      </div>
+    </footer>
 
   </main>
 </body>
