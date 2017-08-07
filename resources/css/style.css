@@ -662,7 +662,7 @@ h2.header-description {
 /* End of styling kontakt.html */
 /* Start of styling oferta.html */
 
-.container-offer {
+.container-offer, .container-attractions {
   padding-top: 90px;
   width: 80%;
   margin: 0 auto;
@@ -670,7 +670,7 @@ h2.header-description {
 .container-offer h3.header-description {
   padding: 10px 20px;
 }
-.container-offer > .container-content {
+.container-offer > .container-content, .container-attractions > .container-content {
   display: flex;
   padding-bottom: 10px;
   padding-right: 0;
@@ -777,6 +777,66 @@ width: 50%;
   font-weight: normal;
 }
 /* End of styling oferta.html */
+.container-attractions > .container-content {
+    background-color: #FFF;
+    padding-bottom: 200px;
+}
+.content-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  margin: 0 10px;
+}
+.content-column-element {
+    position: relative;
+    margin: 10px 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.tile-over {
+  position: absolute;
+  bottom: 0%;
+  height : 20px;
+  width : 100%;
+  color: white;
+  font-size: 16px;
+  font-family: 'Open Sans', serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.content-column-element .tile-under {
+  position: relative;
+}
+.content-column-element .tile-under  img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+}
+#first-img, #last-img {
+    width: 100%;
+    height: calc(2*auto -10px);
+    max-height: 500px;
+}
+
+.content-column-element .tile-over {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+.content-column-element .tile-over > p {
+    transition: all 0.3s ease-out;
+    padding-left: 10px;
+}
+.content-column-element:hover .tile-over {
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+}
+.content-column-element:hover .tile-over > p {
+  vertical-align: middle;
+
+}
 /* Start MEDIA */
 /* Start of media.galeria.html*/
 @media (max-width: 1200px) {

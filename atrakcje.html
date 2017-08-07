@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+
+<head>
+  <!-- content-type, which overrides http equivalent header. Because of charset, this meta should be set at first. -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--  Overrides http equivalent header. This tells IE to use the most updated engine.  -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!--  Tells crawlers how to crawl this page, and the role of this page. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
+  <script type="text/javascript" src="resources/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2aEZ-V6omJorvUW3Yaz4FjCpzF3QwmMs"></script>
+
+  <script type="text/javascript" src="resources/js/map.js"></script>
+  <script type="text/javascript" src="resources/js/scripts.js"></script>
+
+  <title>Cullera Apartment</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top nav-background" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-positioned" id="button-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+          <a href="index.html"><img alt="Logo" class="logo" src="resources/images/logo.png" /></a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse navbar-right navbar-positioned">
+        <section>
+          <nav class="fill">
+            <ul class="nav navbar-nav navbar-right">
+              <li> <a href="oferta.html">Oferta</a> </li>
+              <li> <a href="atrakcje.html">Atrakcje</a> </li>
+              <li> <a href="cennik.html">Cennik</a> </li>
+              <li> <a href="galeria.html">Galeria</a> </li>
+              <li> <a href="kontakt.html">Kontakt</a> </li>
+              <li> <a href="rezerwacja.html" class="Reservation">Rezerwacja</a> </li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="resources/images/pl.png"</img><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <div>
+                    <li><a href="start-seite"><img src="resources/images/de.png"</img></a></li>
+                    <li><a href="empezar"><img src="resources/images/sp.png"</img></a></li>
+                    <li><a href="home"><img src="resources/images/gb.png"</img></a></li>
+                    <li><a href="bonjour"><img src="resources/images/fr.png"</img></a></li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container-attractions">
+      <header>
+        <div class="tab-title">
+          <h1 class="header-description">Atrakcje w okolicy</h1>
+        </div>
+      </header>
+      <article class="container container-content">
+        <section class="content-column">
+          <div class="content-column-element">
+          <div class="tile-under">
+            <img src="http://mariacka13.pl/public/item-category/gdzie-dobrze-zjesz-1462792972.jpg" id="first-img"/>
+          </div>
+          <a href="#"><div class="tile-over">
+            <p>Gdzie dobrze zjeśc?</p>
+          </div></a>
+        </div>
+        <div class="content-column-element">
+        <div class="tile-under">
+          <img src="http://mariacka13.pl/public/item-category/gdzie-zobaczysz-film-1462793005.jpg" />
+        </div>
+        <a href="#"><div class="tile-over">
+          <p>A może do kina?</p>
+        </div></a>
+      </div>
+        </section>
+        <section class="content-column">
+          <div class="content-column-element">
+          <div class="tile-under">
+            <img src="http://mariacka13.pl/public/item-category/gdzie-pojdziesz-do-teatru-1462793021.jpg" />
+          </div>
+          <a href="#"><div class="tile-over">
+            <p>Ale nie róbcie scen...</p>
+          </div></a>
+        </div>
+
+        <div class="content-column-element">
+        <div class="tile-under">
+          <img src="http://mariacka13.pl/public/item-category/gdzie-wypijesz-drinka-i-potanczysz-1462793037.jpg" />
+        </div>
+        <a href="#"><div class="tile-over">
+          <p>Drinki, drineczki...</p>
+        </div></a>
+      </div>
+      <div class="content-column-element">
+      <div class="tile-under">
+        <img src="http://mariacka13.pl/public/item-category/gdzie-zobaczysz-atrakcje-dla-kibica-1462793056.jpg" />
+      </div>
+      <a href="#"><div class="tile-over">
+        <p>Jakby brakowało śliwki...</p>
+      </div></a>
+    </div>
+        </section>
+        <section class="content-column">
+          <div class="content-column-element">
+          <div class="tile-under">
+            <img src="http://mariacka13.pl/public/item-category/gdzie-pojdziesz-na-koncert-1462793074.jpg" />
+          </div>
+          <a href="#"><div class="tile-over">
+            <p>Bądźmy kulturalni...</p>
+          </div></a>
+        </div>
+        <div class="content-column-element">
+        <div class="tile-under">
+          <img id="last-img" src="http://mariacka13.pl/public/item-category/gdzie-wypijesz-kawe-i-zjesz-ciasto-1462793089.jpg" />
+        </div>
+        <a href="#"><div class="tile-over">
+          <p>Kawusia!</p>
+        </div></a>
+      </div>
+        </section>
+      </article>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Copyright 2017 &copy; Cullera Apartment</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
