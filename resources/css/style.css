@@ -493,7 +493,10 @@ div.fc-center h2 {
   flex-direction: column;
   height: auto;
 }
-
+.col-res .row-in {
+  display: flex;
+  flex-direction: column;
+}
 .price-out {
   display: flex;
   justify-content: center;
@@ -526,6 +529,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eded2f', */
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
 }
+
 h2.prices, h3.prices {
   margin: 0;
   font-weight: bold;
@@ -1579,6 +1583,12 @@ width: 50%;
   .col-xs-6, .col-sm-6, .col-md-4, .col-lg-2 {
       height: 120px;
   }
+  .col-res:nth-child(4) {
+    width: 100%
+  }
+  .row .col-res {
+    height: auto;
+  }
   a.positioned {
     font-size: 4vw;
   }
@@ -1609,6 +1619,12 @@ width: 50%;
 @media(width: 576px) {
   .col-xs-6, .col-sm-6, .col-md-4, .col-lg-2 {
       height: 120px;
+  }
+  .col-res:nth-child(4) {
+    width: 100%
+  }
+  .row .col-res {
+    height: auto;
   }
   a.positioned {
     font-size: 4vw;
