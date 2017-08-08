@@ -675,6 +675,7 @@ h2.header-description {
   width: 80%;
   margin: 0 auto;
 }
+
 .container-offer h3.header-description {
   padding: 10px 20px;
 }
@@ -791,9 +792,16 @@ width: 50%;
   margin: 0 auto;
   max-width:  1140px;
 }
+
+.container-attractions .tab-title {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .container-attractions > .container-content {
     background-color: #FFF;
-    padding-bottom: 200px;
+    padding: 0px;
+    padding-bottom: 50px;
 }
 .content-column {
   display: flex;
