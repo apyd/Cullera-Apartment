@@ -489,7 +489,11 @@ div.fc-center h2 {
   background-color: #DEDEDE;
   /*background: -moz-radial-gradient(center, ellipse cover,  #eded2f 0%, #fff 100%);*/
   padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
+
 .price-out {
   display: flex;
   justify-content: center;

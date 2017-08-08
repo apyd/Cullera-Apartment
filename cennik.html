@@ -17,10 +17,34 @@
   <script type="text/javascript" src="resources/js/map.js"></script>
 
   <title>Sample HTML index file</title>
+  <script>
+  $(document).ready(function() {
+  var height = $(document).height().toString();
+  offsetHeight = height.concat("px");
+  document.getElementById('cennik').setAttribute("Style", "height:".concat(offsetHeight));
+});
+  </script>
+  <script>
+$(window).resize(function() {
+  var height = $(document).height().toString();
+  offsetHeight = height.concat("px");
+  document.getElementById('cennik').setAttribute("Style", "height:".concat(offsetHeight));
+});
+  </script>
 </head>
 
 <body>
-  <div class="cennik">
+  <script>
+$(window).resize(function() {
+  if($(window).height()<756){ var height=756;}
+  else {
+  var height = $(window).height().toString();}
+  offsetHeight = height.concat("px");
+  console.log(offsetHeight);
+  document.getElementById('cennik').setAttribute("Style", "height:".concat(offsetHeight));
+});
+  </script>
+  <div class="cennik" id="cennik">
     <nav class="navbar navbar-inverse navbar-fixed-top nav-background" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -119,25 +143,7 @@
           </div>
         </div>
 
-        <p>
-          <p class="short-description price-header">
-            Dodatkowo płatne opcje:
-          </p>
-          <ul class="ul-cennik">
-            <li>
-              Wi-Fi
-            </li>
-            <li>
-              Widok na morze
-            </li>
-            <li>
-              Dobry humor ekipy sprzątającej (Sto złotych)
-            </li>
-            <li>
-              Wywóz śmieci we wtorki
-            </li>
-          </ul>
-        </p>
+
       </div>
 
       <footer class="footer">
