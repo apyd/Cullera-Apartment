@@ -789,6 +789,7 @@ width: 50%;
   padding-top: 90px;
   width: 75%;
   margin: 0 auto;
+  max-width:  1140px;
 }
 .container-attractions > .container-content {
     background-color: #FFF;
@@ -806,6 +807,7 @@ width: 50%;
     margin: 10px 0;
     box-sizing: border-box;
     width: 100%;
+    max-width: 350px;
 }
 .tile-over {
   position: absolute;
@@ -818,9 +820,11 @@ width: 50%;
   font-weight: bold;
   display: flex;
   align-items: center;
+  max-width: 350px;
 }
 .content-column-element .tile-under {
   position: relative;
+      max-width: 350px;
 }
 .content-column-element .tile-under  img {
     width: 100%;
