@@ -285,6 +285,7 @@ div.col-lg-8 {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
 .action-box {
   font-size: 0.7em;
 }
@@ -555,7 +556,7 @@ div.tab-title > p.header-description {
 }
 div.tab-title > h1.header-description {
   padding-top: 20px;
-  font-size: 6em;
+  font-size: 4em;
 }
 ul.ul-cennik > li {
   margin-top: 1.5em;
