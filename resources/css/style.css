@@ -987,7 +987,19 @@ width: 50%;
   font-size: 1em;
   margin-right: 0;
   }
-  /* End of media.rezerwacja.html */
+
+  .container-calendar {
+  margin-top: 20px;
+  width: 60%;
+  height: auto;
+  padding-right: 15px;
+  }
+
+  #calendar {
+  max-width: 900px;
+  margin: 0 auto;
+
+    /* End of media.rezerwacja.html */
   /* Start of media.oferta.html */
   .container-offer .container-content {
     padding-top: 10px;
@@ -1371,11 +1383,19 @@ width: 50%;
   .container-form {
   margin: 0 auto;
   width: 100%;
+  padding-bottom: 50px;
   }
   .container-calendar {
   margin: 0 auto;
   margin-top: 20px;
   width: 100%;
+  }
+
+  form input.btn {
+  float: none;
+  text-align: center;
+  vertical-align: center;
+  margin: 0 auto;
   }
   /* End of media.rezerwacja.html */
   /* Start of media.kontakt.html */
