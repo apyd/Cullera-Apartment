@@ -75,9 +75,12 @@
         <div class="container container-content">
           <div class="row">
             <section>
-              <header>
-              <h3 class="header-description">Zachęcamy do składania zapytania w celu rezerwacji apartamentu</h3>
-              </header>
+          		<header>
+                <div class="tab-title">
+                 <h1 class="header-description">Rezerwacja mieszkania</h1>
+                 <p>Prosimy o wypełnienie formularza w celu rezerwacji</p>
+          			</div>             
+        			</header>
               <div class="col-md-6 container-form">
                 <iframe width="0" height="0" border="0" name="iframe" id="iframe" style="display: none;"></iframe>
                 <form method="post" name="contactform" id="form" action="reservation.php" target="iframe">
@@ -107,7 +110,7 @@
                   </div>
                   <div>
                     <label for="content">Uwagi</label>
-                    <textarea name="content" id="comment" rows="11" style="width: 100%"></textarea>
+                    <textarea name="content" id="comment" rows="6" style="width: 100%"></textarea>
                   </div>
                   <div>
                     <!-- START CAPTCHA -->
@@ -121,7 +124,6 @@
                       </div>
                       <span id="error"></span>
                     </div>
-                  </div>
                   <!-- END CAPTCHA -->
                   <input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ" />
                 </form>

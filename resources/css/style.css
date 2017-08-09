@@ -323,7 +323,7 @@ p > span {
   margin-left: 25px;
 }
 .container-form {
-  width: 40%;
+  width: 50%;
 }
 .container-content {
   margin: 0;
@@ -364,11 +364,10 @@ textarea {
 	color: #000000;
 	background-color: #fcfcff;
 	margin: 5px auto 0px auto;
-	padding: 3px;
+	padding-top: 3px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
-  padding: 8px;
   padding-bottom: 0;
 	}
 #CaptchaDiv {
@@ -387,11 +386,12 @@ textarea {
   }
 #CaptchaInput {
   display: block;
-  margin: 5px auto;
+  margin-top: 5px;
   margin-bottom: 0;
   width: 135px;
-
 }
+
+
 .footer {
   height: 60px;
   background-color: #292c2f;
@@ -422,8 +422,9 @@ textarea {
 }
 .container-calendar {
   margin-top: 20px;
-  width: 60%;
+  width: 50%;
   height: auto;
+  padding-right: 130px;
 }
 #loading {
   display: none;
@@ -432,16 +433,19 @@ textarea {
   right: 10px;
 }
 #calendar {
-  max-width: 900px;
+  max-width: 750px;
   margin: 0 auto;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 }
 .container-reservation {
   margin: 0;
   padding: 0;
-  padding-top: 100px;
+  padding-top: 90px;
 }
+
+.container-reservation .tab-title {
+  padding: 0;
+}
+
 .fc-header-toolbar {
   padding-top: 5px;
   padding-left: 3px;
@@ -451,9 +455,13 @@ textarea {
   background-color: inherit;
 }
 .fc-day {
-  box-shadow: inset 0 0 7px 1px white;
   background-color: rgba(0,116,217, 0.2);
 }
+
+.fc-event {
+  background-color: #1A5398;
+}
+
 .fc-unthemed td.fc-today {
   background:#fff;
 }
@@ -461,42 +469,51 @@ textarea {
   border-color: white;
 }
 .fc-state-default {
-	background-color: #f5f5f5;
-	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: linear-gradient(to bottom, #ffffff, rgba(0,116,217, 0.2));
-	background-repeat: repeat-x;
+	background-color: #f5f5f5; 
 	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	color: #333;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
+.fc-state-hover {
+  transition: none;
+  background-position: 0;
+}
+
 div.fc-center h2 {
   font-family: 'Open Sans', sans-serif;
+}
+
+.fc-state-default.fc-corner-left, .fc-state-default.fc-corner-right {
+  border-radius: 0px;
 }
 .fc-day-number {
   font-size: 1.3em;
   margin-right: 5px;
 }
+
+form input.btn {
+  float: right;
+}
+
 /* End of styling rezerwacja.html*/
 
 /* Start of styling cennik.html */
 .cennik {
-  background-color: #F2C55C;
-  background-color: #DEDEDE;
   /*background: -moz-radial-gradient(center, ellipse cover,  #eded2f 0%, #fff 100%);*/
   padding-top: 90px;
   display: flex;
   flex-direction: column;
   height: auto;
 }
+
 .col-res .row-in {
   display: flex;
   flex-direction: column;
 }
+
 .price-out {
   display: flex;
   justify-content: center;
@@ -529,7 +546,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eded2f', */
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
 }
-
 h2.prices, h3.prices {
   margin: 0;
   font-weight: bold;
@@ -572,8 +588,6 @@ ul.ul-cennik > li {
 /* End of styling cennik.html */
 /* Start of styling galeria.html */
 .galeria {
-  background-color: #F2C55C;
-  background-color: #DEDEDE;
   padding-top: 90px;
   padding-bottom: 20px;
 }
@@ -666,6 +680,8 @@ h2.header-description {
 .container-form > #form {
   max-width: 540px;
   margin: 0 auto;
+  margin-left: 30%;
+  padding-top: 40px;
 }
 .container-form > .centered {
   margin: 0 auto;
@@ -958,6 +974,11 @@ width: 50%;
   margin-top: 10px;
   display: block;
   }
+
+  .container-form > #form {
+  max-width: 540px;
+  margin: 0 auto;
+} 
   .capbox {
   display: block;
   margin: 0 auto;
@@ -1589,6 +1610,7 @@ width: 50%;
   .row .col-res {
     height: auto;
   }
+
   a.positioned {
     font-size: 4vw;
   }
@@ -1620,12 +1642,14 @@ width: 50%;
   .col-xs-6, .col-sm-6, .col-md-4, .col-lg-2 {
       height: 120px;
   }
+
   .col-res:nth-child(4) {
     width: 100%
   }
   .row .col-res {
     height: auto;
   }
+
   a.positioned {
     font-size: 4vw;
   }
