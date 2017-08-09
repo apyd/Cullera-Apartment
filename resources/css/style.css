@@ -899,7 +899,7 @@ width: 50%;
 }
 /* Start MEDIA */
 /* Start of media.galeria.html*/
-@media(max-width: 1700px) {
+@media(max-width: 1600px) {
   #cennik {
     height: auto;
   }
@@ -949,6 +949,10 @@ width: 50%;
   h3 {
     font-size: 1.5em;
   }
+
+  .navbar-inverse .navbar-nav>li>a {
+    font-size: 0.8em;
+  }
   /* Start of media.nav*/
   .navbar, .navbar .navbar-inverse {
     background-color: rgba(26,83,152,0);
@@ -959,9 +963,6 @@ width: 50%;
   .Reservation {
     height: 46px;
     max-height: 46px;
-  }
-  .navbar-inverse .navbar-nav>li>a {
-    font-size: 0.8em;
   }
   ul.nav li a {
     min-height: 35px;
@@ -1049,6 +1050,10 @@ width: 50%;
   h3 {
     font-size: 1.5em;
   }
+
+  .navbar-inverse .navbar-nav>li>a {
+    font-size: 0.8em;
+  }
   /* Start of media.nav */
   .navbar, .navbar .navbar-inverse {
     background-color: rgba(26,83,152,0);
@@ -1059,9 +1064,6 @@ width: 50%;
   .Reservation {
     height: 46px;
     max-height: 46px;
-  }
-  .navbar-inverse .navbar-nav>li>a {
-    font-size: 0.8em;
   }
   ul.nav li a {
     min-height: 35px;
