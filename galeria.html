@@ -42,6 +42,17 @@
       });
     });
   </script>
+  <script>
+    $(document).ready(function() {
+      var images = document.getElementsByTagName('img');
+      if (document.body.clientWidth <= 576) {
+        for (var i = 6; i < 30; i++) {
+          var name = "resources/images/" + (i - 5) + "w.jpg";
+          images[i].setAttribute("src",name);
+        }
+      }
+    });
+  </script>
   <style type="text/css">
     .fancybox-custom .fancybox-skin {
       box-shadow: 0 0 50px #222;
@@ -90,127 +101,151 @@
           </section>
         </div>
       </div>
-      </nav>
-      <div class="container container-gallery">
-        <div class="tab-title">
-          <h1 class="header-description">Zdjęcia naszego mieszkania</h1>
-          <p> Kliknij na zdjęcie aby powiększyć</p>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/9b.jpg" data-fancybox-group="gallery"><img src="resources/images/9s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/11b.jpg" data-fancybox-group="gallery"><img src="resources/images/11s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/10b.jpg" data-fancybox-group="gallery"><img src="resources/images/10s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/8b.jpg" data-fancybox-group="gallery"><img src="resources/images/8s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/3b.jpg" data-fancybox-group="gallery"><img src="resources/images/3s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/4b.jpg" data-fancybox-group="gallery"><img src="resources/images/4s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/1b.jpg" data-fancybox-group="gallery"><img src="resources/images/1s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/18b.jpg" data-fancybox-group="gallery"><img src="resources/images/18s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/6b.jpg" data-fancybox-group="gallery"><img src="resources/images/6s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/5b.jpg" data-fancybox-group="gallery"><img src="resources/images/5s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/2b.jpg" data-fancybox-group="gallery"><img src="resources/images/2s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/13b.jpg" data-fancybox-group="gallery"><img src="resources/images/13s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/7b.jpg" data-fancybox-group="gallery"><img src="resources/images/7s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/16b.jpg" data-fancybox-group="gallery"><img src="resources/images/16s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/20b.jpg" data-fancybox-group="gallery"><img src="resources/images/20s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/12b.jpg" data-fancybox-group="gallery"><img src="resources/images/12s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/19b.jpg" data-fancybox-group="gallery"><img src="resources/images/19s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/14b.jpg" data-fancybox-group="gallery"><img src="resources/images/14s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/15b.jpg" data-fancybox-group="gallery"><img src="resources/images/15s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/17b.jpg" data-fancybox-group="gallery"><img src="resources/images/17s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/21b.jpg" data-fancybox-group="gallery"><img src="resources/images/21s.jpg" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
-            <div class="gallery-out">
-              <a class="fancybox" href="resources/images/22b.jpg" data-fancybox-group="gallery"><img src="resources/images/22s.jpg" alt=""></a>
-            </div>
-          </div>
+    </nav>
 
-        </div>
+    <div class="container container-gallery">
+      <div class="tab-title">
+        <h1 class="header-description">Zdjęcia naszego mieszkania</h1>
+        <p> Kliknij na zdjęcie aby powiększyć</p>
       </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/9b.jpg" data-fancybox-group="gallery"><img src="resources/images/1s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/11b.jpg" data-fancybox-group="gallery"><img src="resources/images/2s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/10b.jpg" data-fancybox-group="gallery"><img src="resources/images/3s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/8b.jpg" data-fancybox-group="gallery"><img src="resources/images/4s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/3b.jpg" data-fancybox-group="gallery"><img src="resources/images/5s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/4b.jpg" data-fancybox-group="gallery"><img src="resources/images/6s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/1b.jpg" data-fancybox-group="gallery"><img src="resources/images/7s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/18b.jpg" data-fancybox-group="gallery"><img src="resources/images/8s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/6b.jpg" data-fancybox-group="gallery"><img src="resources/images/9s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/5b.jpg" data-fancybox-group="gallery"><img src="resources/images/10s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/2b.jpg" data-fancybox-group="gallery"><img src="resources/images/11s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/13b.jpg" data-fancybox-group="gallery"><img src="resources/images/12s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/7b.jpg" data-fancybox-group="gallery"><img src="resources/images/13s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/16b.jpg" data-fancybox-group="gallery"><img src="resources/images/14s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/20b.jpg" data-fancybox-group="gallery"><img src="resources/images/15s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/12b.jpg" data-fancybox-group="gallery"><img src="resources/images/16s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/19b.jpg" data-fancybox-group="gallery"><img src="resources/images/17s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/14b.jpg" data-fancybox-group="gallery"><img src="resources/images/18s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/15b.jpg" data-fancybox-group="gallery"><img src="resources/images/19s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/17b.jpg" data-fancybox-group="gallery"><img src="resources/images/20s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/21b.jpg" data-fancybox-group="gallery"><img src="resources/images/21s.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 col-res-gal">
+          <div class="gallery-out">
+            <a class="fancybox" href="resources/images/22b.jpg" data-fancybox-group="gallery"><img src="resources/images/22s.jpg" alt=""></a>
+          </div>
+        </div>
 
+      </div>
+    </div>
+    <script>
+      $(window).resize(function() {
+        var images = document.getElementsByTagName('img');
+        if (document.body.clientWidth <= 576) {
+          for (var i = 6; i < 30; i++) {
+            var name = "resources/images/" + (i - 5) + "w.jpg";
+            if (images[i].getAttribute("src") == name) {
+              break;
+            } else {
+              images[i].setAttribute("src",name);
+            }
+          }
+        } else {
+          for (var i = 6; i < 30; i++) {
+            var name = "resources/images/" + (i - 5) + "s.jpg";
+            if (images[i].getAttribute("src") == name) {
+              break;
+            } else {
+              images[i].setAttribute("src",name);
+            }
+          }
+        }
+      });
+    </script>
 
   </div>
 

@@ -344,6 +344,10 @@ p > span {
 .logo-alt {
   margin-left: 25px;
 }
+.container .row #form {
+  max-width: 540px;
+  margin: 0 auto;
+}
 /* Start of styling rezerwacja.html */
 input {
   padding: 1px 3px;
