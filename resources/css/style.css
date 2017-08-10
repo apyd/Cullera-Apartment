@@ -522,6 +522,12 @@ form input.btn {
   flex-direction: column;
   height: 100%;;
 }
+
+.cennik .row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .cennik .container-content {
   width:80%;
   margin: 0 auto;
@@ -636,10 +642,14 @@ a.fancybox > img {
 }
 
 .header-localization {
-  text-align: center;
   font-size: 20px;
   margin-top: 0;
 }
+
+p.txt .header-description {
+  margin-left: 0;
+}
+
 .container-map-localized {
   margin-bottom: 20px;
   display: flex;
@@ -695,6 +705,11 @@ a.fancybox > img {
   margin: 0;
   margin-left: 20px;
 }
+
+.container-localization p:first-child {
+  margin-left: 0;
+}
+
 h2.header-description {
   font-size: 25px;
   text-align: center;
@@ -899,11 +914,17 @@ width: 50%;
 }
 /* Start MEDIA */
 /* Start of media.galeria.html*/
-@media(max-width: 1600px) {
-  #cennik {
+@media(max-width: 1500px) {
+  #cennik, #offer {
     height: auto;
   }
+
 }
+
+  #offer {
+    height: 100%;
+  }
+
 @media (max-width: 1200px) {
   .col-res-gal {
     width: 33.3%;
