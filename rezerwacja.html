@@ -113,17 +113,22 @@
                   </div>
                   <div>
                     <!-- START CAPTCHA -->
-                    <br>
-                    <div class="capbox">
-                      <div id="CaptchaDiv"></div>
-                      <div class="capbox-inner">
-                        Przepisz powyższą liczbę:<br>
-                        <input type="hidden" id="txtCaptcha">
-                        <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
-                      </div>
-                      <span id="error"></span>
-                      <input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ" />
-                    </div>
+                <br>
+                <div class="capbox">
+                  <div class="captcha-wrapper">
+                    <div>
+                  <div id="CaptchaDiv"></div>
+                  <div class="capbox-inner">
+                    <p>Przepisz powyższą liczbę:</p><br>
+                    <input type="hidden" id="txtCaptcha">
+                    <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+                  </div>
+                  </div>
+                  <span id="error"></span>
+                </div>
+                  <input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" data-toggle="modal" value="WYŚLIJ" />
+                </div>
+              </div>
                   <!-- END CAPTCHA -->
 
                 </form>

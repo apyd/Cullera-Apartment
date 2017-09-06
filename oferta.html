@@ -19,6 +19,20 @@
   <script type="text/javascript" src="resources/js/map.js"></script>
   <script type="text/javascript" src="resources/js/scripts.js"></script>
 
+  <script>
+
+  $(document).ready(function() {
+
+     var docHeight = $(window).height();
+     var footerHeight = $('#footer').height();
+     var footerTop = $('#footer').position().top + footerHeight;
+
+     if (footerTop < docHeight) {
+      $('#footer').css('margin-top', (docHeight - footerTop) + 'px');
+     }
+    });
+  </script>
+
   <title>Cullera Apartment</title>
 </head>
 
@@ -66,7 +80,6 @@
     </div>
   </nav>
 
-  <main>
     <div class="container-offer">
       <header>
         <div class="tab-title">
@@ -75,65 +88,74 @@
       </header>
       <article class="container container-content">
           <div class="container-apartment-description">
-            <p>
-              Apartament znajduje się na ósmym piętrze w urokliwym kompleksie apartamentowym <b>Arensol</b>, usytuowanym w nadmorskim kurorcie <b>Cullera</b>, jednej z najpiękniejszych miejscowośći na hiszpańskim wybrzeżu.<br /><br /> Na powierzchni <b>75 m²</b> rozłożony
-              jest <b>salon wraz z częścią jadalną</b> oraz <b>aneksem kuchennym</b>, dwie <b>sypialnie</b> a także <b>łazienka</b> i <b>przedpokój</b>. Z salonu można wyjść na <b>taras</b> z niesamowitym widokiem na pobliską piaszczystą plażę oraz morze. <br /><br />Apartament umożliwia komfortowy
-              odpoczynek grupie <b>do 6</b> osób. <br /><br /> Budynek <b>przystosowany jest</b> do mieszkania osób niepełnosprawnych. <br /><br /> Dodatkowo do dyspozycji gości dostępny jest <b>bezpłatne</b> miejsce parkingowe, internet (płatny <b>10eur/tydz</b>), 25m basen, korty
-              tenisowe oraz boisko do koszykówki. <br /><br />Istnieje możliwość przewozu z lotniska do apartamentu za dodatkową opłatą.
+            <p> Apartament znajduje się na ósmym piętrze w urokliwym kompleksie apartamentowym <b>Arensol</b>, usytuowanym w nadmorskim kurorcie.
+            <b>Cullera</b>, jednej z najpiękniejszych miejscowości na hiszpańskim wybrzeżu.</p>
+
+            <p> Na powierzchni <b>75 m²</b> rozłożony jest <b>salon wraz z częścią jadalną</b> oraz <b>aneksem kuchennym</b>, dwie <b>sypialnie</b> a także <b>łazienka</b> i <b>przedpokój</b>.</p>
+
+            <p>Z salonu można wyjść na <b>taras</b> z niesamowitym widokiem na pobliską piaszczystą plażę oraz morze.</p>
+
+            <p>Apartament umożliwia komfortowy odpoczynek grupie <b>do 6</b> osób.</p>
+
+            <p>Budynek <b>przystosowany jest</b> do mieszkania osób niepełnosprawnych.</p>
+
+            <p>Dodatkowo do dyspozycji gości dostępny jest <b>bezpłatne</b> miejsce parkingowe, internet (płatny <b>10eur/tydz</b>), 25m basen, korty tenisowe oraz boisko do koszykówki.</p>
+
+            <p>Istnieje możliwość przewozu z lotniska do apartamentu za dodatkową opłatą.</p>
             </p>
           </div>
         <div class="container-whatsin">
           <section class="container-apartment-left">
             <header>
-              <h3 class="header-description">Wyposażenie</h3>
+              <h3 class="header-description">Wyposażenie:</h3>
             </header>
             <div class="col container-apartment-whatsin">
               <div class="row">
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Telewizor</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">WiFi</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Żelazko</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Płyta indukcyjna</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Piekarnik</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Lodówka</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Kuchenka mikrofalowa</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Czajnik</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Suszarka</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Pralka</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Prysznic</p>
                 </div>
-                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt">Pościel</p>
                 </div>
@@ -144,15 +166,15 @@
             <h3 class="header-description">Dodatkowo dostępne:</h3>
             <div class="col container-apartment-whatsin">
               <div class="row">
-                <div class="container-info container-info-additional col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt"><span>Winda</span></p>
                 </div>
-                <div class="container-info container-info-additional col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt"><span>Basen</span></p>
                 </div>
-                <div class="container-info container-info-additional col-xs-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="container-info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                   <img class="graphic-icon" src="resources/images/sign.png" alt="bus stop" />
                   <p class="txt"><span>Miejsca parkingowe</span></p>
                 </div>
@@ -163,8 +185,7 @@
         </div>
       </article>
     </div>
-  </main>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="container">
       <p>Copyright 2017 &copy; Cullera Apartment</p>
     </div>
